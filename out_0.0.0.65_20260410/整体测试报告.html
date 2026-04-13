@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>整体测试报告汇总</title>
+<style>
+  :root {
+    --primary:#2563eb; --success:#16a34a; --danger:#dc2626;
+    --warning:#d97706; --skip:#6b7280;
+    --text:#1e293b; --text-muted:#64748b;
+    --border:#e2e8f0; --bg:#f8fafc; --white:#fff;
+    --shadow:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);
+    --radius:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+  .header{background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 50%,#3b82f6 100%);color:#fff;padding:32px 0 0;position:relative;overflow:hidden}
+  .header::before{content:'';position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .header-inner{max-width:1200px;margin:0 auto;padding:0 32px;position:relative;z-index:1}
+  .header-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;margin-bottom:12px}
+  .header h1{font-size:26px;font-weight:700;letter-spacing:-.3px}
+  .header h1 span{opacity:.75;font-weight:400;font-size:20px}
+  .header-meta{display:flex;gap:20px;margin-top:10px;flex-wrap:wrap}
+  .header-meta-item{display:flex;align-items:center;gap:6px;font-size:13px;opacity:.85}
+  .header-tabs{display:flex;margin-top:24px}
+  .tab{padding:10px 26px;font-size:14px;color:rgba(255,255,255,.6);border-bottom:3px solid transparent;cursor:pointer;transition:.2s;white-space:nowrap;user-select:none}
+  .tab:hover{color:rgba(255,255,255,.9)}
+  .tab.active{color:#fff;border-color:#fff;font-weight:600}
+  .tab-panel{display:none}.tab-panel.active{display:block;animation:fadeIn .25s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  .container{max-width:1200px;margin:0 auto;padding:32px 32px 60px}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+  .stat-card{background:var(--white);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);border-left:4px solid transparent;position:relative;overflow:hidden}
+  .stat-card::before{content:'';position:absolute;right:-16px;top:-16px;width:80px;height:80px;border-radius:50%;opacity:.06}
+  .stat-card.total{border-color:#2563eb}.stat-card.total::before{background:#2563eb}
+  .stat-card.pass{border-color:#16a34a}.stat-card.pass::before{background:#16a34a}
+  .stat-card.fail{border-color:#dc2626}.stat-card.fail::before{background:#dc2626}
+  .stat-card.skip{border-color:#6b7280}.stat-card.skip::before{background:#6b7280}
+  .stat-label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+  .stat-num{font-size:36px;font-weight:700;line-height:1.1;margin:6px 0 4px}
+  .stat-card.total .stat-num{color:#2563eb}.stat-card.pass .stat-num{color:#16a34a}
+  .stat-card.fail .stat-num{color:#dc2626}.stat-card.skip .stat-num{color:#6b7280}
+  .stat-sub{font-size:12px;color:var(--text-muted)}
+
+  .charts-row{display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:24px}
+  .card{background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .card-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:18px}
+  .donut-wrap{display:flex;flex-direction:column;align-items:center}
+  .donut-svg{width:160px;height:160px;transform:rotate(-90deg)}
+  .donut-track{fill:none;stroke:#f1f5f9;stroke-width:22}
+  .donut-pass{fill:none;stroke:#16a34a;stroke-width:22;stroke-linecap:butt;transition:stroke-dasharray .6s}
+  .donut-fail{fill:none;stroke:#dc2626;stroke-width:22;stroke-linecap:butt}
+  .donut-block{fill:none;stroke:#f59e0b;stroke-width:22;stroke-linecap:butt}
+  .donut-center{position:relative;margin-top:-100px;margin-bottom:20px;text-align:center;pointer-events:none}
+  .donut-pct{font-size:28px;font-weight:700;color:#16a34a}
+  .donut-sub{font-size:12px;color:var(--text-muted)}
+  .donut-legend{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:13px}
+  .legend-dot{width:10px;height:10px;border-radius:50%}
+
+  .mod-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  .mod-card{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+  .mod-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .mod-card-name{font-size:13px;font-weight:600;color:#1e40af;text-decoration:none}
+  .mod-card-name:hover{text-decoration:underline}
+  .mod-card-stats{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+  .mcs{font-size:11px;padding:2px 7px;border-radius:10px;font-weight:500}
+  .mcs.pass{background:#dcfce7;color:#15803d}
+  .mcs.fail{background:#fee2e2;color:#b91c1c}
+  .mcs.block{background:#fef3c7;color:#92400e}
+
+  .section-title{font-size:18px;font-weight:700;color:var(--text);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:12px 14px;text-align:left;font-weight:500;font-size:13px}
+  th:first-child{border-radius:8px 0 0 0}th:last-child{border-radius:0 8px 0 0}
+  td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
+  tr:hover td{background:#f0f7ff}
+  tr:last-child td{border-bottom:none}
+  .td-idx{color:var(--text-muted);font-size:12px;width:40px}
+  .td-name{font-weight:500}
+  .td-num{text-align:center;width:70px}
+  .td-rate{width:160px}
+  .td-p-rate{width:70px;text-align:center;font-size:13px;font-weight:600}
+  .td-risk{min-width:220px;max-width:380px;font-size:12px;line-height:1.6}
+  .td-conc{width:120px}
+  .pass-num{color:#16a34a;font-weight:600}
+  .fail-num{color:#dc2626;font-weight:600}
+  .block-num{color:#d97706;font-weight:600}
+  .muted-num{color:var(--text-muted)}
+  .mod-link{color:#1e40af;text-decoration:none;font-weight:500}
+  .mod-link:hover{text-decoration:underline;color:#2563eb}
+  .rate-bar-wrap{height:6px;background:#f1f5f9;border-radius:3px;overflow:hidden;margin-bottom:4px}
+  .rate-bar{height:100%;border-radius:3px;transition:width .4s}
+  .rate-val{font-size:12px;font-weight:600}
+  .conc-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:500;white-space:nowrap}
+  .conc-badge.sm{padding:2px 6px;font-size:11px}
+  .risk-item{display:block;padding:1px 0}
+  .risk-none{color:#6b7280;font-style:italic}
+  .risk-detail-wrap{height:auto;overflow-y:visible}
+
+  .conclusion-box{background:linear-gradient(135deg,#f0fdf4,#eff6ff);border:1px solid #86efac;border-radius:var(--radius);padding:24px;margin-top:24px}
+  .conclusion-icon{font-size:32px;margin-bottom:8px}
+  .conclusion-title{font-size:20px;font-weight:700;margin-bottom:12px}
+  .conclusion-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+  .conclusion-item{background:#fff;border-radius:8px;padding:12px 16px;border:1px solid var(--border)}
+  .ci-label{font-size:12px;color:var(--text-muted);margin-bottom:4px}
+  .ci-val{font-size:15px;font-weight:600}
+
+  @media(max-width:768px){
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .charts-row{grid-template-columns:1fr}
+    .container{padding:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge">📊 整体测试报告</div>
+    <h1>讯飞眼镜项目 <span>· 全模块测试汇总</span></h1>
+    <div class="header-meta">
+      <div class="header-meta-item">📅 2026-04-12</div>
+      <div class="header-meta-item">📦 共 15 个模块</div>
+      <div class="header-meta-item">✅ 整体通过率 60.0%</div>
+      <div class="header-meta-item">❌ 无法上线</div>
+    </div>
+    <div class="header-tabs">
+      <div class="tab active" onclick="switchTab('overview')">总览</div>
+      <div class="tab" onclick="switchTab('detail')">模块明细</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 统计卡片 -->
+  <div class="stats-grid">
+    <div class="stat-card total">
+      <div class="stat-label">用例总数</div>
+      <div class="stat-num">623</div>
+      <div class="stat-sub">共 15 个模块</div>
+    </div>
+    <div class="stat-card pass">
+      <div class="stat-label">通过</div>
+      <div class="stat-num">282</div>
+      <div class="stat-sub">通过率 60.0%</div>
+    </div>
+    <div class="stat-card fail">
+      <div class="stat-label">失败</div>
+      <div class="stat-num">95</div>
+      <div class="stat-sub">P1:46 P2:38 P3:11</div>
+    </div>
+    <div class="stat-card skip">
+      <div class="stat-label">阻塞/未执行</div>
+      <div class="stat-num">93</div>
+      <div class="stat-sub">未执行 153 条</div>
+    </div>
+  </div>
+
+  <!-- Tab: 总览 -->
+  <div id="tab-overview" class="tab-panel active">
+    <div class="charts-row">
+      <!-- 甜甜圈图 -->
+      <div class="card">
+        <div class="card-title">整体执行分布</div>
+        <div class="donut-wrap">
+          <svg class="donut-svg" viewBox="0 0 160 160">
+            <circle class="donut-track" cx="80" cy="80" r="65"/>
+            <circle class="donut-pass" cx="80" cy="80" r="65"
+              stroke-dasharray="184.9 223.5"
+              stroke-dashoffset="0"/>
+            <circle class="donut-fail" cx="80" cy="80" r="65"
+              stroke-dasharray="62.3 346.1"
+              stroke-dashoffset="-184.9"/>
+            <circle class="donut-block" cx="80" cy="80" r="65"
+              stroke-dasharray="61.0 347.4"
+              stroke-dashoffset="-247.2"/>
+          </svg>
+          <div class="donut-center">
+            <div class="donut-pct">60.0%</div>
+            <div class="donut-sub">通过率</div>
+          </div>
+          <div class="donut-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div>通过 282</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>失败 95</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>阻塞 93</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 模块卡片 -->
+      <div class="card">
+        <div class="card-title">各模块执行情况（点击跳转详情）</div>
+        <div class="mod-cards-grid">
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：OTA-测试报告.html" target="_blank" class="mod-card-name">任务1：OTA</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 6</span>
+            <span class="mcs fail">失败 0</span>
+            <span class="mcs block">阻塞 18</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:25%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">25.0%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：wifi快传-测试报告.html" target="_blank" class="mod-card-name">任务1：wifi快传</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 3</span>
+            <span class="mcs fail">失败 1</span>
+            <span class="mcs block">阻塞 0</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:75%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">75.0%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：亮灭屏休眠-测试报告.html" target="_blank" class="mod-card-name">任务1：亮灭屏休眠</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 3</span>
+            <span class="mcs fail">失败 2</span>
+            <span class="mcs block">阻塞 8</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:23%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">23.1%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：同声传译-测试报告.html" target="_blank" class="mod-card-name">任务1：同声传译</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 10</span>
+            <span class="mcs fail">失败 0</span>
+            <span class="mcs block">阻塞 1</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:91%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">90.9%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：提示音-测试报告.html" target="_blank" class="mod-card-name">任务1：提示音</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 19</span>
+            <span class="mcs fail">失败 24</span>
+            <span class="mcs block">阻塞 0</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:44%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">44.2%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：物理按键0410-测试报告.html" target="_blank" class="mod-card-name">任务1：物理按键0410</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 14</span>
+            <span class="mcs fail">失败 8</span>
+            <span class="mcs block">阻塞 0</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:64%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">63.6%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：通话0410-测试报告.html" target="_blank" class="mod-card-name">任务1：通话0410</a>
+            <span class="conc-badge sm" style="color:#92400e;background:#fef3c7">🚫</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 17</span>
+            <span class="mcs fail">失败 3</span>
+            <span class="mcs block">阻塞 0</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:85%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">85.0%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：音乐0410-测试报告.html" target="_blank" class="mod-card-name">任务1：音乐0410</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 21</span>
+            <span class="mcs fail">失败 1</span>
+            <span class="mcs block">阻塞 0</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:96%;background:#16a34a;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#16a34a;font-weight:600;margin-top:4px;display:block">95.5%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务1：首页-测试报告.html" target="_blank" class="mod-card-name">任务1：首页</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 9</span>
+            <span class="mcs fail">失败 3</span>
+            <span class="mcs block">阻塞 4</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:56%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">56.2%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="任务2：AI助手-测试报告.html" target="_blank" class="mod-card-name">任务2：AI助手</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 16</span>
+            <span class="mcs fail">失败 9</span>
+            <span class="mcs block">阻塞 12</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:43%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">43.2%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="拍照录像-测试报告.html" target="_blank" class="mod-card-name">拍照录像</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 17</span>
+            <span class="mcs fail">失败 22</span>
+            <span class="mcs block">阻塞 26</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:26%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">26.2%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="线上同传0401-测试报告.html" target="_blank" class="mod-card-name">线上同传0401</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 28</span>
+            <span class="mcs fail">失败 4</span>
+            <span class="mcs block">阻塞 6</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:74%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">73.7%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="蓝牙功能-测试报告.html" target="_blank" class="mod-card-name">蓝牙功能</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 51</span>
+            <span class="mcs fail">失败 2</span>
+            <span class="mcs block">阻塞 6</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:86%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">86.4%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="通话翻译-测试报告.html" target="_blank" class="mod-card-name">通话翻译</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 43</span>
+            <span class="mcs fail">失败 5</span>
+            <span class="mcs block">阻塞 3</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:84%;background:#d97706;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#d97706;font-weight:600;margin-top:4px;display:block">84.3%</span>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-header">
+            <a href="面对面翻译dd2测试-测试报告.html" target="_blank" class="mod-card-name">面对面翻译dd2测试</a>
+            <span class="conc-badge sm" style="color:#b91c1c;background:#fee2e2">❌</span>
+          </div>
+          <div class="mod-card-stats">
+            <span class="mcs pass">通过 25</span>
+            <span class="mcs fail">失败 11</span>
+            <span class="mcs block">阻塞 9</span>
+          </div>
+          <div class="mod-card-bar">
+            <div style="height:6px;border-radius:3px;background:#f1f5f9;overflow:hidden">
+              <div style="height:100%;width:56%;background:#dc2626;border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;display:block">55.6%</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 上线结论 -->
+    <div class="conclusion-box" style="background:#fee2e2;border-color:#86efac">
+      <div class="conclusion-icon">❌</div>
+      <div class="conclusion-title" style="color:#b91c1c">无法上线</div>
+      <div class="conclusion-grid">
+        <div class="conclusion-item">
+          <div class="ci-label">整体通过率</div>
+          <div class="ci-val" style="color:#d97706">60.0%</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="ci-label">P1 遗留缺陷</div>
+          <div class="ci-val" style="color:#dc2626">46 个</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="ci-label">P2 遗留缺陷</div>
+          <div class="ci-val" style="color:#dc2626">38 个</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="ci-label">P3 遗留缺陷</div>
+          <div class="ci-val" style="color:#d97706">11 个</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="ci-label">模块总数</div>
+          <div class="ci-val">15 个</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="ci-label">已执行用例</div>
+          <div class="ci-val">470 / 623</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: 模块明细 -->
+  <div id="tab-detail" class="tab-panel">
+    <div class="card" style="padding:0;overflow:hidden">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>模块名称</th>
+            <th style="text-align:center">总数</th>
+            <th style="text-align:center">通过</th>
+            <th style="text-align:center">失败</th>
+            <th style="text-align:center">阻塞</th>
+            <th style="text-align:center">未执行</th>
+            <th>通过率</th>
+            <th style="text-align:center">P1通过率</th>
+            <th style="text-align:center">P2通过率</th>
+            <th style="text-align:center">P3通过率</th>
+            <th>风险详情</th>
+            <th>结论</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+          <td class="td-idx">1</td>
+          <td class="td-name">
+            <a href="任务1：OTA-测试报告.html" target="_blank" class="mod-link">任务1：OTA</a>
+          </td>
+          <td class="td-num">28</td>
+          <td class="td-num pass-num">6</td>
+          <td class="td-num fail-num">0</td>
+          <td class="td-num block-num">18</td>
+          <td class="td-num muted-num">4</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:25%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">25.0%</span>
+          </td>
+          <td class="td-p-rate" style="color:#dc2626">50.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-p-rate" style="color:#d97706">66.7%</td>
+          <td class="td-risk"><span class="risk-none">无遗留缺陷</span></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">2</td>
+          <td class="td-name">
+            <a href="任务1：wifi快传-测试报告.html" target="_blank" class="mod-link">任务1：wifi快传</a>
+          </td>
+          <td class="td-num">25</td>
+          <td class="td-num pass-num">3</td>
+          <td class="td-num fail-num">1</td>
+          <td class="td-num block-num">0</td>
+          <td class="td-num muted-num">21</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:75%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">75.0%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">75.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-risk"><span class="risk-none">无遗留缺陷</span></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">3</td>
+          <td class="td-name">
+            <a href="任务1：亮灭屏休眠-测试报告.html" target="_blank" class="mod-link">任务1：亮灭屏休眠</a>
+          </td>
+          <td class="td-num">38</td>
+          <td class="td-num pass-num">3</td>
+          <td class="td-num fail-num">2</td>
+          <td class="td-num block-num">8</td>
+          <td class="td-num muted-num">25</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:23%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">23.1%</span>
+          </td>
+          <td class="td-p-rate" style="color:#dc2626">23.1%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-p-rate" style="color:#6b7280">-</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349099?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20349099</a>[中/一般]: 【眼镜端】息屏状态下触控板唤醒AI助手眼镜不会亮屏，手动亮屏后眼镜显示异常</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">4</td>
+          <td class="td-name">
+            <a href="任务1：同声传译-测试报告.html" target="_blank" class="mod-link">任务1：同声传译</a>
+          </td>
+          <td class="td-num">33</td>
+          <td class="td-num pass-num">10</td>
+          <td class="td-num fail-num">0</td>
+          <td class="td-num block-num">1</td>
+          <td class="td-num muted-num">22</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:91%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">90.9%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">90.9%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-risk"><span class="risk-none">无遗留缺陷</span></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">5</td>
+          <td class="td-name">
+            <a href="任务1：提示音-测试报告.html" target="_blank" class="mod-link">任务1：提示音</a>
+          </td>
+          <td class="td-num">44</td>
+          <td class="td-num pass-num">19</td>
+          <td class="td-num fail-num">24</td>
+          <td class="td-num block-num">0</td>
+          <td class="td-num muted-num">1</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:44%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">44.2%</span>
+          </td>
+          <td class="td-p-rate" style="color:#dc2626">10.5%</td>
+          <td class="td-p-rate" style="color:#d97706">81.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#b91c1c">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20374589?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20374589</a>[高/一般]: 【眼镜端】ai助手唤醒提示音卡顿</span><span class="risk-item" style="color:#374151">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20373942?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20373942</a>[中/一般]: 【固件】AI助手休眠提示音错误</span><span class="risk-item" style="color:#374151">3. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20373806?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20373806</a>[中/一般]: 【固件】向AI助手提问，提问结束无提示音</span><span class="risk-item" style="color:#374151">4. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20373815?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20373815</a>[中/一般]: 【固件】AI 助手回答完问题后，提示音错误</span><span class="risk-item" style="color:#374151">5. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20351869?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20351869</a>[中/一般]: 【固件】播放音乐的过程中唤醒AI助手，AI助手在回答问题的过程中，单击右触控板，语音播报不停止</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">6</td>
+          <td class="td-name">
+            <a href="任务1：物理按键0410-测试报告.html" target="_blank" class="mod-link">任务1：物理按键0410</a>
+          </td>
+          <td class="td-num">31</td>
+          <td class="td-num pass-num">14</td>
+          <td class="td-num fail-num">8</td>
+          <td class="td-num block-num">0</td>
+          <td class="td-num muted-num">9</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:64%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">63.6%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">66.7%</td>
+          <td class="td-p-rate" style="color:#dc2626">15.4%</td>
+          <td class="td-p-rate" style="color:#6b7280">-</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349308?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20349308</a>[中/一般]: 【固件】点击右镜腿按键拍照，无拍摄声音和闪光灯反馈</span><span class="risk-item" style="color:#374151">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349311?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20349311</a>[中/一般]: 【固件】长按右镜腿按键2S录像及结束录像，无反馈</span><span class="risk-item" style="color:#374151">3. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363692?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20363692</a>[中/一般]: 【固件】通话过程中，长按触控板2S，会唤醒AI助手</span><span class="risk-item" style="color:#374151">4. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20351869?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20351869</a>[中/一般]: 【固件】播放音乐的过程中唤醒AI助手，AI助手在回答问题的过程中，单击右触控板，语音播报不停止</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">7</td>
+          <td class="td-name">
+            <a href="任务1：通话0410-测试报告.html" target="_blank" class="mod-link">任务1：通话0410</a>
+          </td>
+          <td class="td-num">25</td>
+          <td class="td-num pass-num">17</td>
+          <td class="td-num fail-num">3</td>
+          <td class="td-num block-num">0</td>
+          <td class="td-num muted-num">5</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:85%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">85.0%</span>
+          </td>
+          <td class="td-p-rate" style="color:#16a34a">100.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">57.9%</td>
+          <td class="td-p-rate" style="color:#6b7280">-</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20340443?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20340443</a>[中/一般]: 【固件】测试机接听辅助机来电以及辅助机接听测试机来电，辅助机所接收的声音存在明显卡顿</span><span class="risk-item" style="color:#b91c1c">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20330354?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20330354</a>[高/严重]: 【固件】通话过程中蓝牙超距断连，靠近不重连</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#92400e;background:#fef3c7">🚫 暂缓上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">8</td>
+          <td class="td-name">
+            <a href="任务1：音乐0410-测试报告.html" target="_blank" class="mod-link">任务1：音乐0410</a>
+          </td>
+          <td class="td-num">22</td>
+          <td class="td-num pass-num">21</td>
+          <td class="td-num fail-num">1</td>
+          <td class="td-num block-num">0</td>
+          <td class="td-num muted-num">0</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:96%;background:#16a34a"></div>
+            </div>
+            <span class="rate-val" style="color:#16a34a">95.5%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">91.7%</td>
+          <td class="td-p-rate" style="color:#16a34a">100.0%</td>
+          <td class="td-p-rate" style="color:#6b7280">-</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20329535?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20329535</a>[中/一般]: 【固件】音量调至最大，再播放音乐/视频，会出现刺耳的电流声</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">9</td>
+          <td class="td-name">
+            <a href="任务1：首页-测试报告.html" target="_blank" class="mod-link">任务1：首页</a>
+          </td>
+          <td class="td-num">37</td>
+          <td class="td-num pass-num">9</td>
+          <td class="td-num fail-num">3</td>
+          <td class="td-num block-num">4</td>
+          <td class="td-num muted-num">21</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:56%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">56.2%</span>
+          </td>
+          <td class="td-p-rate" style="color:#dc2626">56.2%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-p-rate" style="color:#6b7280">-</td>
+          <td class="td-risk"><span class="risk-none">无遗留缺陷</span></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">10</td>
+          <td class="td-name">
+            <a href="任务2：AI助手-测试报告.html" target="_blank" class="mod-link">任务2：AI助手</a>
+          </td>
+          <td class="td-num">37</td>
+          <td class="td-num pass-num">16</td>
+          <td class="td-num fail-num">9</td>
+          <td class="td-num block-num">12</td>
+          <td class="td-num muted-num">0</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:43%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">43.2%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">60.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">52.9%</td>
+          <td class="td-p-rate" style="color:#dc2626">26.7%</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#b91c1c">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346994?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20346994</a>[高/一般]: 【眼镜端】AI助手无法语音唤醒</span><span class="risk-item" style="color:#374151">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355089?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355089</a>[中/一般]: 【眼镜端】同声传译中长按右触控板2s，眼镜未提示正在使用旁听同传翻译，暂不支持唤醒助手</span><span class="risk-item" style="color:#374151">3. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355143?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355143</a>[中/一般]: 【眼镜端】【固件】AI助手回答过程中，不能被说话打断</span><span class="risk-item" style="color:#374151">4. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355568?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355568</a>[中/一般]: 【眼镜端】唤醒ai助手连续10s不说话，ai助手退出后没有播报关闭音效</span><span class="risk-item" style="color:#374151">5. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355587</a>[中/一般]: 【眼镜端】app内未登录账号，使用按键或者语音唤醒AI助手，未提示请先登录讯飞翻译再试哦”</span><span class="risk-item" style="color:#374151">6. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355598?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355598</a>[中/一般]: 【眼镜端】眼镜未连接蓝牙，唤醒ai助手，未播报和显示 你的眼镜蓝牙还没有连接呢</span><span class="risk-item" style="color:#374151">7. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355727?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355727</a>[中/一般]: 【眼镜端】ai助手播报过程中，接听电话，ai助手继续播报，挂断后，ai助手仍继续播报（长按触控板2S拒接电话会误触唤醒ai助手，且通话过程中长按触控板会唤醒AI助手）</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">11</td>
+          <td class="td-name">
+            <a href="拍照录像-测试报告.html" target="_blank" class="mod-link">拍照录像</a>
+          </td>
+          <td class="td-num">97</td>
+          <td class="td-num pass-num">17</td>
+          <td class="td-num fail-num">22</td>
+          <td class="td-num block-num">26</td>
+          <td class="td-num muted-num">32</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:26%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">26.2%</span>
+          </td>
+          <td class="td-p-rate" style="color:#dc2626">26.7%</td>
+          <td class="td-p-rate" style="color:#dc2626">16.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">0.0%</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20340800?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20340800</a>[中/一般]: 【眼镜端】进入AI助手界面，"小飞，小飞，打开设置"，不支持打开</span><span class="risk-item" style="color:#b91c1c">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346994?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20346994</a>[高/一般]: 【眼镜端】AI助手无法语音唤醒</span><span class="risk-item" style="color:#374151">3. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346785?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20346785</a>[中/一般]: 【眼镜端】语音指令，小飞拍照指令无法使用</span><span class="risk-item" style="color:#374151">4. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20359758?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20359758</a>[中/一般]: 【眼镜端】息屏状态下物理按键开启拍照，左右显示的界面不一致</span><span class="risk-item" style="color:#374151">5. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349308?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20349308</a>[中/一般]: 【固件】点击右镜腿按键拍照，无拍摄声音和闪光灯反馈</span><span class="risk-item" style="color:#b91c1c">6. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355945?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355945</a>[高/一般]: 【眼镜端】照片和录像无法在线自动同步至app</span><span class="risk-item" style="color:#b91c1c">7. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20341452?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20341452</a>[紧急/严重]: 【眼镜端】【Android】眼镜录像中出现重启</span><span class="risk-item" style="color:#374151">8. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355953?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20355953</a>[中/一般]: 【眼镜端】长按2s右镜腿开始录像，没有声音反馈和指示灯</span><span class="risk-item" style="color:#374151">9. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20356821?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20356821</a>[中/一般]: 【眼镜端】录像时界面的文案图标显示不正确</span><span class="risk-item" style="color:#b91c1c">10. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20356249?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20356249</a>[高/一般]: 【眼镜端】录像过程中到设定时长计时停止，没有自动结束</span><span class="risk-item" style="color:#374151">11. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20356253?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20356253</a>[中/一般]: 【眼镜端】录像时长与设定时长不一致</span><span class="risk-item" style="color:#b91c1c">12. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20356302?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20356302</a>[紧急/一般]: 【眼镜端】录像文件手动同步也无法同步到手机</span><span class="risk-item" style="color:#b91c1c">13. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20356793?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20356793</a>[高/一般]: 【眼镜端】录像界面仍然可以开启AI助手多轮对话</span><span class="risk-item" style="color:#374151">14. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20356816?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20356816</a>[中/一般]: 【眼镜端】录像时开启拍照，返回录像界面后没有状态栏信息</span><span class="risk-item" style="color:#b91c1c">15. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20369120?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20369120</a>[高/严重]: 【眼镜端】录像界面接听挂断来电，眼镜会重启</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">12</td>
+          <td class="td-name">
+            <a href="线上同传0401-测试报告.html" target="_blank" class="mod-link">线上同传0401</a>
+          </td>
+          <td class="td-num">40</td>
+          <td class="td-num pass-num">28</td>
+          <td class="td-num fail-num">4</td>
+          <td class="td-num block-num">6</td>
+          <td class="td-num muted-num">2</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:74%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">73.7%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">78.6%</td>
+          <td class="td-p-rate" style="color:#d97706">61.9%</td>
+          <td class="td-p-rate" style="color:#d97706">80.0%</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363707?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20363707</a>[中/一般]: 【眼镜端】线上同传使用中沉浸式校验失败</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">13</td>
+          <td class="td-name">
+            <a href="蓝牙功能-测试报告.html" target="_blank" class="mod-link">蓝牙功能</a>
+          </td>
+          <td class="td-num">59</td>
+          <td class="td-num pass-num">51</td>
+          <td class="td-num fail-num">2</td>
+          <td class="td-num block-num">6</td>
+          <td class="td-num muted-num">0</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:86%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">86.4%</span>
+          </td>
+          <td class="td-p-rate" style="color:#d97706">83.3%</td>
+          <td class="td-p-rate" style="color:#d97706">87.9%</td>
+          <td class="td-p-rate" style="color:#d97706">85.7%</td>
+          <td class="td-risk"><span class="risk-none">无遗留缺陷</span></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">14</td>
+          <td class="td-name">
+            <a href="通话翻译-测试报告.html" target="_blank" class="mod-link">通话翻译</a>
+          </td>
+          <td class="td-num">60</td>
+          <td class="td-num pass-num">43</td>
+          <td class="td-num fail-num">5</td>
+          <td class="td-num block-num">3</td>
+          <td class="td-num muted-num">9</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:84%;background:#d97706"></div>
+            </div>
+            <span class="rate-val" style="color:#d97706">84.3%</span>
+          </td>
+          <td class="td-p-rate" style="color:#16a34a">95.0%</td>
+          <td class="td-p-rate" style="color:#dc2626">50.0%</td>
+          <td class="td-p-rate" style="color:#d97706">83.3%</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#374151">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349374?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20349374</a>[中/一般]: 【眼镜app】【Android】通话翻译切换语种未重新播报握手礼</span><span class="risk-item" style="color:#374151">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20364520?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20364520</a>[中/一般]: 【眼镜端】关闭原声播报仍可听到对方原声</span><span class="risk-item" style="color:#374151">3. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20369203?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20369203</a>[中/一般]: 【眼镜端】通话翻译中英显示乱码</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-idx">15</td>
+          <td class="td-name">
+            <a href="面对面翻译dd2测试-测试报告.html" target="_blank" class="mod-link">面对面翻译dd2测试</a>
+          </td>
+          <td class="td-num">47</td>
+          <td class="td-num pass-num">25</td>
+          <td class="td-num fail-num">11</td>
+          <td class="td-num block-num">9</td>
+          <td class="td-num muted-num">2</td>
+          <td class="td-rate">
+            <div class="rate-bar-wrap">
+              <div class="rate-bar" style="width:56%;background:#dc2626"></div>
+            </div>
+            <span class="rate-val" style="color:#dc2626">55.6%</span>
+          </td>
+          <td class="td-p-rate" style="color:#dc2626">50.0%</td>
+          <td class="td-p-rate" style="color:#d97706">64.3%</td>
+          <td class="td-p-rate" style="color:#dc2626">22.2%</td>
+          <td class="td-risk"><div class="risk-detail-wrap"><span class="risk-item" style="color:#b91c1c">1. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20326745?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20326745</a>[高/一般]: 【眼镜端】【iOS】面对面翻译，眼镜显示的我方和对方文案错误</span><span class="risk-item" style="color:#374151">2. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20369943?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20369943</a>[中/一般]: 【眼镜端】面对面翻译，偶现中文识别结果中间没有符号连接</span><span class="risk-item" style="color:#b91c1c">3. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20372186?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20372186</a>[高/一般]: 【眼镜app】【安卓】面对面翻译连续使用10min13s眼镜断连</span><span class="risk-item" style="color:#b91c1c">4. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20372426?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20372426</a>[高/一般]: 【眼镜app】【安卓】面对面翻译中翻译服务报错020005</span><span class="risk-item" style="color:#b91c1c">5. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20345971?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20345971</a>[高/一般]: 【眼镜端】面对面翻译，多模态降噪功能未实现</span><span class="risk-item" style="color:#374151">6. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20340745?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20340745</a>[中/一般]: 【眼镜端】面对面翻译，接听电话无法暂停对话</span><span class="risk-item" style="color:#b91c1c">7. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20375161?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20375161</a>[高/严重]: 【眼镜端】同声传译切到面对面翻译，偶现界面卡住不收音</span><span class="risk-item" style="color:#374151">8. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20370030?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20370030</a>[中/一般]: 【眼镜APP】【Android】面对面翻译拾音时，断开网络报错999999</span><span class="risk-item" style="color:#374151">9. <a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20342992?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&openScene=2" target="_blank" style="color:inherit;text-decoration:underline;">#20342992</a>[中/一般]: 【眼镜端】面对面翻译过程中按眼镜快捷键没有toast提示</span></div></td>
+          <td class="td-conc">
+            <span class="conc-badge" style="color:#b91c1c;background:#fee2e2">❌ 无法上线</span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    const names = ['overview','detail'];
+    t.classList.toggle('active', names[i] === name);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+}
+</script>
+</body>
+</html>
