@@ -230,7 +230,7 @@
           </div>
           <div class="header-meta-item">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 0a.5.5 0 01.5.5v.5h4V.5a.5.5 0 011 0v.5H12a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2h1V.5a.5.5 0 01.5-.5zM4 3a1 1 0 00-1 1v1h10V4a1 1 0 00-1-1H4zm9 3H3v6a1 1 0 001 1h8a1 1 0 001-1V6z"/></svg>
-            执行日期：2026-04-14
+            执行日期：2026-04-16
           </div>
           <div class="header-meta-item">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 8a3 3 0 100-6 3 3 0 000 6zm-5 6a5 5 0 0110 0H3z"/></svg>
@@ -262,13 +262,13 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">38</div>
-      <div class="stat-sub">本次执行 3 个 · 跳过 0 个 · 未执行 35 个</div>
+      <div class="stat-sub">本次执行 13 个 · 跳过 9 个 · 未执行 25 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
       <div class="stat-label">通过</div>
-      <div class="stat-num">2</div>
-      <div class="stat-sub">执行通过率 <strong style="color:#15803d">66.7%</strong>（2/3）</div>
+      <div class="stat-num">3</div>
+      <div class="stat-sub">执行通过率 <strong style="color:#15803d">23.1%</strong>（3/13）</div>
       <div class="stat-icon">✅</div>
     </div>
     <div class="stat-card fail">
@@ -279,8 +279,8 @@
     </div>
     <div class="stat-card skip">
       <div class="stat-label">跳过 / 阻塞</div>
-      <div class="stat-num">0</div>
-      <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 0 条</div>
+      <div class="stat-num">9</div>
+      <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 9 条</div>
       <div class="stat-icon">⏭️</div>
     </div>
   </div>
@@ -302,27 +302,27 @@
         -->
         <svg class="donut-svg" viewBox="0 0 160 160">
           <circle class="donut-track" cx="80" cy="80" r="65"/>
-          <!-- PASS → 21.5 386.9 offset 0 -->
+          <!-- PASS → 32.2 376.2 offset 0 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#16a34a"
-            stroke-dasharray="21.5 386.9" stroke-dashoffset="0"/>
-          <!-- FAIL → 10.7 397.7 offset -21.5 -->
+            stroke-dasharray="32.2 376.2" stroke-dashoffset="0"/>
+          <!-- FAIL → 10.7 397.7 offset -32.2 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#dc2626"
-            stroke-dasharray="10.7 397.7" stroke-dashoffset="-21.5"/>
-          <!-- PARTIAL → 0.0 408.4 offset -32.2 -->
+            stroke-dasharray="10.7 397.7" stroke-dashoffset="-32.2"/>
+          <!-- PARTIAL → 96.7 311.7 offset -42.9 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#f59e0b"
-            stroke-dasharray="0.0 408.4" stroke-dashoffset="-32.2"/>
+            stroke-dasharray="96.7 311.7" stroke-dashoffset="-42.9"/>
           <!-- 中心文字（rotate 90 抵消父元素旋转） -->
           <text x="80" y="74" text-anchor="middle" transform="rotate(90,80,80)"
-            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">66.7%</text>
+            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">23.1%</text>
           <text x="80" y="94" text-anchor="middle" transform="rotate(90,80,80)"
             style="font-size:10px;fill:#64748b;font-family:system-ui">通过率</text>
         </svg>
         <div class="legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">2 (5.3%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">3 (7.9%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">1 (2.6%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (0.0%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">0</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">35</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (23.7%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">9</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">25</div></div>
         </div>
       </div>
     </div>
@@ -337,8 +337,8 @@
         <div class="priority-bars">
           <!-- P1 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">2 通过 / 1 失败 / 13 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p1" style="width:15.4%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">3 通过 / 1 失败 / 13 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p1" style="width:23.1%"></div></div>
           </div>
           <!-- P2 -->
           <div class="pbar-row">
@@ -365,9 +365,9 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">亮屏</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">息屏</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">休眠</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
+          <div class="mod-item"><div class="mod-name">亮屏</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span></div></div>
+<div class="mod-item"><div class="mod-name">息屏</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
+<div class="mod-item"><div class="mod-name">休眠</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
         </div>
       </div>
     </div>
@@ -380,7 +380,7 @@
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#15803d">✅ 质量亮点</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li>本轮测试顺利完成，数据已记录归档</li>
+          <li>已执行用例中通过率 23.1%，阻塞用例 9 条待后续补充验证</li>
           <!-- 每条：<li>亮点描述</li> -->
         </ul>
       </div>
@@ -388,6 +388,7 @@
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#b91c1c">⚠️ 风险 & 改进建议</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
           <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
+<li><strong>阻塞用例较多：</strong>9 条用例（占比 23.7%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
           <!-- 每条：<li><strong>BUG/风险名：</strong>描述</li> -->
         </ul>
       </div>
@@ -396,7 +397,7 @@
     <div style="margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-radius:8px;border-left:4px solid #2563eb">
       <div style="font-size:13px;color:#1e40af;font-weight:600;margin-bottom:4px">🎯 上线准入评估</div>
       <div style="font-size:13px;color:#374151;line-height:1.7">
-        <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 15.4%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 0.0%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
+        <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 23.1%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 0.0%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
       </div>
     </div>
   </div>
@@ -406,7 +407,7 @@
 <div class="tab-panel" id="panel-1">
   <div class="section-header">
     <h2>📋 用例执行明细</h2>
-    <div class="section-badge">已执行 3 个</div>
+    <div class="section-badge">已执行 13 个</div>
     <div class="section-line"></div>
   </div>
   <div class="card" style="padding:0">
@@ -426,17 +427,17 @@
         <tbody>
           <tr class="group-row"><td colspan="6">亮屏</td></tr>
 <tr><td><span class="tc-id">xplp_0613</span></td><td class="tc-name">手动亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xplp_0614</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20346994</span></td></tr>
-<tr><td><span class="tc-id">xplp_0615</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xplp_0614</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20346994</span></td></tr>
+<tr><td><span class="tc-id blocked-id">xplp_0615</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">xplp_0616</span></td><td class="tc-name">触控板亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右触控板2s</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20349099</span></td></tr>
-<tr><td><span class="tc-id">xmlp_0620</span></td><td class="tc-name">手动亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xmlp_0621</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xmlp_0622</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xmlp_0623</span></td><td class="tc-name">触控板亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右触控板2s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xmlp_0620</span></td><td class="tc-name">手动亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xmlp_0621</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xmlp_0622</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xmlp_0623</span></td><td class="tc-name">触控板亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右触控板2s</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">息屏</td></tr>
 <tr><td><span class="tc-id">lpxp_0627</span></td><td class="tc-name">手动息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20304259</span></td></tr>
-<tr><td><span class="tc-id">lpxp_0628</span></td><td class="tc-name">自动息屏-默认10s</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 等待10s无操作</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">lpxp_0629</span></td><td class="tc-name">抬头显示后自动息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°2. 等待10s无操作</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">lpxp_0628</span></td><td class="tc-name">自动息屏-默认10s</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 等待10s无操作</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">lpxp_0629</span></td><td class="tc-name">抬头显示后自动息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°2. 等待10s无操作</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0630</span></td><td class="tc-name">自动息屏-5s</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏5s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0631</span></td><td class="tc-name">自动息屏-10s</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏10s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0632</span></td><td class="tc-name">自动息屏-20s</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏20s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -453,9 +454,9 @@
 <tr><td><span class="tc-id">lpxp_0643</span></td><td class="tc-name">新手引导-不息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏10s2. 眼镜开启新手引导</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0644</span></td><td class="tc-name">设置-不息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏10s2. 眼镜进入设置</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">休眠</td></tr>
-<tr><td><span class="tc-id">xpxm_0645</span></td><td class="tc-name">自动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 自动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xpxm_0645</span></td><td class="tc-name">自动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 自动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0646</span></td><td class="tc-name">自动息屏后小于15min</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 自动息屏后等待10min2. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xpxm_0647</span></td><td class="tc-name">手动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 手动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xpxm_0647</span></td><td class="tc-name">手动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 手动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0648</span></td><td class="tc-name">听音乐-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 自动息屏后听音乐超过15min</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0649</span></td><td class="tc-name">打电话-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏2. 通话开启通话翻译时长超过15min</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0650</span></td><td class="tc-name">会议录音-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏2. 会议录音开启时长超过15min3. 手动点亮屏幕</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -494,7 +495,7 @@
     </div>
   </div>
   <div class="not-exe-note">
-    <strong>📌 未执行用例说明：</strong> 共 0 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。
+    <strong>📌 未执行用例说明：</strong> 共 9 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。
   </div>
 </div>
 
@@ -506,7 +507,7 @@
     <div class="section-line"></div>
   </div>
   <div class="bugs-list">
-    <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349099?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20349099</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】息屏状态下触控板唤醒AI助手眼镜不会亮屏，手动亮屏后眼镜显示异常</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：中 | 严重性：一般 | 处理人：苏汉访 hfsu</div></div></div></div><div class="bug-title">触控板亮屏</div><div class="bug-meta"><span class="bug-tag">模块：亮屏</span><span class="bug-tag">关联：xplp_0616</span></div></div></div>
+    <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349099?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20349099</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】息屏状态下触控板唤醒AI助手眼镜不会亮屏，手动亮屏后眼镜显示异常</div><div style="color:#6b7280;line-height:1.5;">状态：修复中 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">触控板亮屏</div><div class="bug-meta"><span class="bug-tag">模块：亮屏</span><span class="bug-tag">关联：xplp_0616</span></div></div></div>
     <!--
       每个缺陷一块：
       <div class="bug-card">
@@ -554,19 +555,19 @@
       <div class="env-item"><div class="env-label">测试系统</div><div class="env-val">讯飞眼镜项目</div></div>
       <div class="env-item"><div class="env-label">测试 URL</div><div class="env-val" style="font-size:12px">端侧(RTOS) + APP(Android)</div></div>
       <div class="env-item"><div class="env-label">测试账号</div><div class="env-val">纪豪(haoji2)（测试负责人）</div></div>
-      <div class="env-item"><div class="env-label">执行日期</div><div class="env-val">2026-04-14</div></div>
+      <div class="env-item"><div class="env-label">执行日期</div><div class="env-val">2026-04-16</div></div>
       <div class="env-item"><div class="env-label">执行方式</div><div class="env-val">手动测试</div></div>
       <div class="env-item"><div class="env-label">浏览器</div><div class="env-val">N/A（端侧设备）</div></div>
       <div class="env-item"><div class="env-label">测试类型</div><div class="env-val">功能测试（手动）</div></div>
-      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">亮灭屏休眠-1776160679377.csv</div></div>
-      <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.72</div></div>
+      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">亮灭屏休眠-1776248797281.csv</div></div>
+      <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.76</div></div>
     </div>
     <div style="margin-top:24px">
       <div class="card-title" style="margin-bottom:16px">⏱️ 测试执行时间线</div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>亮灭屏休眠测试</strong><span>执行 38 条用例：通过 2、失败 1、阻塞 0</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-14</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 无法上线</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>亮灭屏休眠测试</strong><span>执行 38 条用例：通过 3、失败 1、阻塞 9</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-16</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 无法上线</span></div></div>
         <!--
           每个节点：
           <div class="tl-item">
@@ -586,7 +587,7 @@
 
 <div class="footer">
   <strong>亮灭屏休眠 · 功能测试报告</strong> &nbsp;|&nbsp;
-  报告生成时间：2026-04-14 &nbsp;|&nbsp;
+  报告生成时间：2026-04-16 &nbsp;|&nbsp;
   测试人员：纪豪(haoji2) &nbsp;|&nbsp;
   工具：手动测试
 </div>
@@ -614,60 +615,60 @@
 ║  【基本信息】（来自 project-config.md）                                       ║
 ║  亮灭屏休眠      模块名称，如：社群公告管理                               ║
 ║  讯飞眼镜项目     项目名称，如：创业服务管理平台                            ║
-║  2026-04-14        执行日期，如：2026-03-13                                ║
+║  2026-04-16        执行日期，如：2026-03-13                                ║
 ║  纪豪(haoji2)           测试人员，如：超管-张三                                   ║
 ║  测试负责人      角色，如：超级管理员                                     ║
 ║  端侧(RTOS) + APP(Android)          测试环境 URL                                            ║
 ║  手动测试      执行方式，如：Playwright MCP 辅助手动测试                 ║
 ║  N/A（端侧设备）          浏览器，如：Chromium（Headed 模式）                      ║
-║  亮灭屏休眠-1776160679377.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
-║  0.0.0.72     测试版本，如：v1.1（需求文档版本）                        ║
+║  亮灭屏休眠-1776248797281.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
+║  0.0.0.76     测试版本，如：v1.1（需求文档版本）                        ║
 ║                                                                              ║
 ║  【统计数字】（来自阶段三执行汇总）                                              ║
 ║  38       用例总数                                                ║
-║  3    已执行数（pass+fail+partial）                           ║
-║  2        通过数                                                  ║
+║  13    已执行数（pass+fail+partial）                           ║
+║  3        通过数                                                  ║
 ║  1        失败数                                                  ║
 ║  0     部分通过数                                               ║
-║  0        跳过数                                                  ║
-║  35     未执行数                                                ║
-║  66.7   执行通过率（保留1位小数，如：88.9）                       ║
+║  9        跳过数                                                  ║
+║  25     未执行数                                                ║
+║  23.1   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 1 个（P1:1 P2:0 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
-║  因功能未就绪/前置条件不满足被阻塞 0 条 跳过原因简述                                            ║
+║  因功能未就绪/前置条件不满足被阻塞 9 条 跳过原因简述                                            ║
 ║                                                                              ║
 ║  【SVG 甜甜圈计算】（C = 2×π×65 ≈ 408.4）                                    ║
-║  21.5    pass/executed × 408.4（保留1位小数）                   ║
-║  386.9    408.4 - PASS_LEN                                      ║
+║  32.2    pass/executed × 408.4（保留1位小数）                   ║
+║  376.2    408.4 - PASS_LEN                                      ║
 ║  10.7    fail/executed × 408.4                                 ║
 ║  397.7    408.4 - FAIL_LEN                                      ║
-║  0.0    partial/executed × 408.4                              ║
-║  408.4    408.4 - PART_LEN                                      ║
-║  32.2 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
-║  5.3    pass/executed 的百分比（保留1位小数）                   ║
+║  96.7    partial/executed × 408.4                              ║
+║  311.7    408.4 - PART_LEN                                      ║
+║  42.9 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
+║  7.9    pass/executed 的百分比（保留1位小数）                   ║
 ║  2.6    fail/executed 的百分比                                 ║
-║  0.0    partial/executed 的百分比                              ║
+║  23.7    partial/executed 的百分比                              ║
 ║                                                                              ║
 ║  【优先级分布】                                                                ║
 ║  {{P1/P2/P3/P4_PASS}} {{P1/P2/P3/P4_FAIL}} {{P1/P2/P3/P4_EXE}}             ║
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">亮屏</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">息屏</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">休眠</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">亮屏</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span></div></div>
+<div class="mod-item"><div class="mod-name">息屏</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
+<div class="mod-item"><div class="mod-name">休眠</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">亮屏</td></tr>
 <tr><td><span class="tc-id">xplp_0613</span></td><td class="tc-name">手动亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xplp_0614</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20346994</span></td></tr>
-<tr><td><span class="tc-id">xplp_0615</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xplp_0614</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20346994</span></td></tr>
+<tr><td><span class="tc-id blocked-id">xplp_0615</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">xplp_0616</span></td><td class="tc-name">触控板亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右触控板2s</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20349099</span></td></tr>
-<tr><td><span class="tc-id">xmlp_0620</span></td><td class="tc-name">手动亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xmlp_0621</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xmlp_0622</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xmlp_0623</span></td><td class="tc-name">触控板亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右触控板2s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xmlp_0620</span></td><td class="tc-name">手动亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xmlp_0621</span></td><td class="tc-name">AI助手语音唤醒</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. &quot;小飞，小飞&quot;唤醒AI助手</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xmlp_0622</span></td><td class="tc-name">抬头显示亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xmlp_0623</span></td><td class="tc-name">触控板亮屏</td><td class="tc-module">亮屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右触控板2s</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">息屏</td></tr>
 <tr><td><span class="tc-id">lpxp_0627</span></td><td class="tc-name">手动息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击左物理键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20304259</span></td></tr>
-<tr><td><span class="tc-id">lpxp_0628</span></td><td class="tc-name">自动息屏-默认10s</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 等待10s无操作</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">lpxp_0629</span></td><td class="tc-name">抬头显示后自动息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°2. 等待10s无操作</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">lpxp_0628</span></td><td class="tc-name">自动息屏-默认10s</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 等待10s无操作</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">lpxp_0629</span></td><td class="tc-name">抬头显示后自动息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 抬头角度大于15°2. 等待10s无操作</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0630</span></td><td class="tc-name">自动息屏-5s</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏5s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0631</span></td><td class="tc-name">自动息屏-10s</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏10s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0632</span></td><td class="tc-name">自动息屏-20s</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏20s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -684,9 +685,9 @@
 <tr><td><span class="tc-id">lpxp_0643</span></td><td class="tc-name">新手引导-不息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏10s2. 眼镜开启新手引导</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lpxp_0644</span></td><td class="tc-name">设置-不息屏</td><td class="tc-module">息屏</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端设置自动息屏10s2. 眼镜进入设置</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">休眠</td></tr>
-<tr><td><span class="tc-id">xpxm_0645</span></td><td class="tc-name">自动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 自动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xpxm_0645</span></td><td class="tc-name">自动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 自动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0646</span></td><td class="tc-name">自动息屏后小于15min</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 自动息屏后等待10min2. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xpxm_0647</span></td><td class="tc-name">手动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 手动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xpxm_0647</span></td><td class="tc-name">手动息屏后自动休眠-15min</td><td class="tc-module">休眠</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 手动息屏后等待15min2. 单击左物理键</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0648</span></td><td class="tc-name">听音乐-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 自动息屏后听音乐超过15min</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0649</span></td><td class="tc-name">打电话-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏2. 通话开启通话翻译时长超过15min</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0650</span></td><td class="tc-name">会议录音-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏2. 会议录音开启时长超过15min3. 手动点亮屏幕</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -696,13 +697,14 @@
 <tr><td><span class="tc-id">xpxm_0654</span></td><td class="tc-name">提词器-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏超过15min2. 手动点亮屏幕</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0655</span></td><td class="tc-name">新手引导-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏超过15min2. 手动点亮屏幕</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xpxm_0656</span></td><td class="tc-name">设置-不休眠</td><td class="tc-module">休眠</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜手动息屏超过15min2. 手动点亮屏幕</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>     用例明细表格行（含 group-row 分组行）                   ║
-║  共 0 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
-║  <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349099?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20349099</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】息屏状态下触控板唤醒AI助手眼镜不会亮屏，手动亮屏后眼镜显示异常</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：中 | 严重性：一般 | 处理人：苏汉访 hfsu</div></div></div></div><div class="bug-title">触控板亮屏</div><div class="bug-meta"><span class="bug-tag">模块：亮屏</span><span class="bug-tag">关联：xplp_0616</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
-║  <li>本轮测试顺利完成，数据已记录归档</li> 质量亮点 <li> 列表                                    ║
-║  <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>  风险建议 <li> 列表                                     ║
-║  <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 15.4%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 0.0%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
+║  共 9 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
+║  <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20349099?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20349099</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】息屏状态下触控板唤醒AI助手眼镜不会亮屏，手动亮屏后眼镜显示异常</div><div style="color:#6b7280;line-height:1.5;">状态：修复中 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">触控板亮屏</div><div class="bug-meta"><span class="bug-tag">模块：亮屏</span><span class="bug-tag">关联：xplp_0616</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
+║  <li>已执行用例中通过率 23.1%，阻塞用例 9 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
+║  <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
+<li><strong>阻塞用例较多：</strong>9 条用例（占比 23.7%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
+║  <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 23.1%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 0.0%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
 ║  <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>亮灭屏休眠测试</strong><span>执行 38 条用例：通过 2、失败 1、阻塞 0</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-14</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 无法上线</span></div></div>     时间线节点（.tl-item 列表）                             ║
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>亮灭屏休眠测试</strong><span>执行 38 条用例：通过 3、失败 1、阻塞 9</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-16</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 无法上线</span></div></div>     时间线节点（.tl-item 列表）                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
