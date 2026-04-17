@@ -262,7 +262,7 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">97</div>
-      <div class="stat-sub">本次执行 70 个 · 跳过 14 个 · 未执行 27 个</div>
+      <div class="stat-sub">本次执行 70 个 · 跳过 5 个 · 未执行 22 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
@@ -278,7 +278,7 @@
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
-      <div class="stat-label">跳过 / 阻塞</div>
+      <div class="stat-label">阻塞</div>
       <div class="stat-num">14</div>
       <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 14 条</div>
       <div class="stat-icon">⏭️</div>
@@ -320,9 +320,9 @@
         <div class="legend">
           <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">35 (36.1%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">21 (21.6%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (14.4%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">14</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">27</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">阻塞</div><div class="legend-val" style="color:#d97706">14 (14.4%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">5</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">22</div></div>
         </div>
       </div>
     </div>
@@ -365,9 +365,9 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">拍照</div><div class="mod-pills"><span class="pill pill-p">通过 14</span><span class="pill pill-f">失败 11</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span></div></div>
-<div class="mod-item"><div class="mod-name">录像</div><div class="mod-pills"><span class="pill pill-p">通过 21</span><span class="pill pill-f">失败 9</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 9</span></div></div>
-<div class="mod-item"><div class="mod-name">camera性能</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
+          <div class="mod-item"><div class="mod-name">拍照</div><div class="mod-pills"><span class="pill pill-p">通过 14</span><span class="pill pill-f">失败 11</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 4</span></div></div>
+<div class="mod-item"><div class="mod-name">录像</div><div class="mod-pills"><span class="pill pill-p">通过 21</span><span class="pill pill-f">失败 9</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 9</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 1</span></div></div>
+<div class="mod-item"><div class="mod-name">camera性能</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
         </div>
       </div>
     </div>
@@ -449,10 +449,10 @@
 <tr><td><span class="tc-id blocked-id">pzgcz_0694</span></td><td class="tc-name">拍照界面开启AI助手对话</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右触控板2S2. 与AI助手对话3. 结束对话等待10s</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0695</span></td><td class="tc-name">拍照界面开启音乐</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启音乐</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0696</span></td><td class="tc-name">拍照界面开启录像</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按2s右镜腿按键2. 录像后长按2s右镜腿按键3. 等待3s无操作</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20358469</span></td></tr>
-<tr><td><span class="tc-id">pzgcz_0697</span></td><td class="tc-name">拍照界面开启录音</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pzgcz_0698</span></td><td class="tc-name">拍照界面打开语音翻译</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开语音翻译2. 语音翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pzgcz_0699</span></td><td class="tc-name">拍照界面打开提词器</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开提词器2. 提词完成后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pzgcz_0700</span></td><td class="tc-name">拍照界面打开AI视界</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开AI视界2. 视觉翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0697</span></td><td class="tc-name">拍照界面开启录音</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0698</span></td><td class="tc-name">拍照界面打开语音翻译</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开语音翻译2. 语音翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0699</span></td><td class="tc-name">拍照界面打开提词器</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开提词器2. 提词完成后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0700</span></td><td class="tc-name">拍照界面打开AI视界</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开AI视界2. 视觉翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0701</span></td><td class="tc-name">拍照界面接听来电</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 来电提醒2. 双击触控板3. 通话后双击触控板</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0702</span></td><td class="tc-name">拍照界面拒接来电</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 来电提醒2. 长按触控板 2s</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pzgcz_0703</span></td><td class="tc-name">拍照界面消息提醒</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 接收多条微信消息2. 等待消息消失</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
@@ -490,7 +490,7 @@
 <tr><td><span class="tc-id fail-id">lxgcz_0734</span></td><td class="tc-name">录像界面无法开启AI助手多轮对话</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右触控板2S</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20356793</span></td></tr>
 <tr><td><span class="tc-id">lxgcz_0735</span></td><td class="tc-name">录像界面开启音乐</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启音乐</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lxgcz_0736</span></td><td class="tc-name">录像界面开启拍照</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 单击右镜腿按键2. 拍照后单击右镜腿按键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20356816</span></td></tr>
-<tr><td><span class="tc-id">lxgcz_0737</span></td><td class="tc-name">录像界面开启录音</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">lxgcz_0737</span></td><td class="tc-name">录像界面开启录音</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">lxgcz_0738</span></td><td class="tc-name">录像界面打开语音翻译</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开语音翻译2. 语音翻译后返回</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">lxgcz_0739</span></td><td class="tc-name">录像界面打开提词器</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开提词器2. 提词完成后返回</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">lxgcz_0740</span></td><td class="tc-name">录像界面打开AI视界</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开AI视界2. 视觉翻译后返回</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
@@ -709,9 +709,9 @@
 ║  70    已执行数（pass+fail+partial）                           ║
 ║  35        通过数                                                  ║
 ║  21        失败数                                                  ║
-║  0     部分通过数                                               ║
-║  14        跳过数                                                  ║
-║  27     未执行数                                                ║
+║  14     部分通过数                                               ║
+║  5        跳过数                                                  ║
+║  22     未执行数                                                ║
 ║  50.0   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 21 个（P1:4 P2:17 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 14 条 跳过原因简述                                            ║
@@ -733,9 +733,9 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">拍照</div><div class="mod-pills"><span class="pill pill-p">通过 14</span><span class="pill pill-f">失败 11</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span></div></div>
-<div class="mod-item"><div class="mod-name">录像</div><div class="mod-pills"><span class="pill pill-p">通过 21</span><span class="pill pill-f">失败 9</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 9</span></div></div>
-<div class="mod-item"><div class="mod-name">camera性能</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">拍照</div><div class="mod-pills"><span class="pill pill-p">通过 14</span><span class="pill pill-f">失败 11</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 4</span></div></div>
+<div class="mod-item"><div class="mod-name">录像</div><div class="mod-pills"><span class="pill pill-p">通过 21</span><span class="pill pill-f">失败 9</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 9</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 1</span></div></div>
+<div class="mod-item"><div class="mod-name">camera性能</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">拍照</td></tr>
 <tr><td><span class="tc-id fail-id">kqpz_0675</span></td><td class="tc-name">唤醒语音指令开启-在线</td><td class="tc-module">拍照</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 语音指令下发：小飞小飞，开启拍照</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20340800</span>, <span style="color:#dc2626;font-weight:600">BUG#20346994</span></td></tr>
 <tr><td><span class="tc-id fail-id">kqpz_0676</span></td><td class="tc-name">唤醒语音指令开启-离线</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 语音指令下发：小飞小飞，开启拍照</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
@@ -759,10 +759,10 @@
 <tr><td><span class="tc-id blocked-id">pzgcz_0694</span></td><td class="tc-name">拍照界面开启AI助手对话</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右触控板2S2. 与AI助手对话3. 结束对话等待10s</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0695</span></td><td class="tc-name">拍照界面开启音乐</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启音乐</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0696</span></td><td class="tc-name">拍照界面开启录像</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按2s右镜腿按键2. 录像后长按2s右镜腿按键3. 等待3s无操作</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20358469</span></td></tr>
-<tr><td><span class="tc-id">pzgcz_0697</span></td><td class="tc-name">拍照界面开启录音</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pzgcz_0698</span></td><td class="tc-name">拍照界面打开语音翻译</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开语音翻译2. 语音翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pzgcz_0699</span></td><td class="tc-name">拍照界面打开提词器</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开提词器2. 提词完成后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pzgcz_0700</span></td><td class="tc-name">拍照界面打开AI视界</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开AI视界2. 视觉翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0697</span></td><td class="tc-name">拍照界面开启录音</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0698</span></td><td class="tc-name">拍照界面打开语音翻译</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开语音翻译2. 语音翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0699</span></td><td class="tc-name">拍照界面打开提词器</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开提词器2. 提词完成后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pzgcz_0700</span></td><td class="tc-name">拍照界面打开AI视界</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开AI视界2. 视觉翻译后返回</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0701</span></td><td class="tc-name">拍照界面接听来电</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 来电提醒2. 双击触控板3. 通话后双击触控板</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pzgcz_0702</span></td><td class="tc-name">拍照界面拒接来电</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 来电提醒2. 长按触控板 2s</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pzgcz_0703</span></td><td class="tc-name">拍照界面消息提醒</td><td class="tc-module">拍照</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 接收多条微信消息2. 等待消息消失</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
@@ -800,7 +800,7 @@
 <tr><td><span class="tc-id fail-id">lxgcz_0734</span></td><td class="tc-name">录像界面无法开启AI助手多轮对话</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右触控板2S</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20356793</span></td></tr>
 <tr><td><span class="tc-id">lxgcz_0735</span></td><td class="tc-name">录像界面开启音乐</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启音乐</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">lxgcz_0736</span></td><td class="tc-name">录像界面开启拍照</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 单击右镜腿按键2. 拍照后单击右镜腿按键</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20356816</span></td></tr>
-<tr><td><span class="tc-id">lxgcz_0737</span></td><td class="tc-name">录像界面开启录音</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">lxgcz_0737</span></td><td class="tc-name">录像界面开启录音</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 双击右镜腿2. 结束录音后双击右镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">lxgcz_0738</span></td><td class="tc-name">录像界面打开语音翻译</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开语音翻译2. 语音翻译后返回</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">lxgcz_0739</span></td><td class="tc-name">录像界面打开提词器</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开提词器2. 提词完成后返回</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">lxgcz_0740</span></td><td class="tc-name">录像界面打开AI视界</td><td class="tc-module">录像</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开AI视界2. 视觉翻译后返回</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>

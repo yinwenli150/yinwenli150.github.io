@@ -262,7 +262,7 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">16</div>
-      <div class="stat-sub">本次执行 16 个 · 跳过 7 个 · 未执行 0 个</div>
+      <div class="stat-sub">本次执行 16 个 · 跳过 0 个 · 未执行 0 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
@@ -278,7 +278,7 @@
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
-      <div class="stat-label">跳过 / 阻塞</div>
+      <div class="stat-label">阻塞</div>
       <div class="stat-num">7</div>
       <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 7 条</div>
       <div class="stat-icon">⏭️</div>
@@ -320,8 +320,8 @@
         <div class="legend">
           <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">4 (25.0%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">5 (31.2%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (43.8%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">7</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">阻塞</div><div class="legend-val" style="color:#d97706">7 (43.8%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">0</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">0</div></div>
         </div>
       </div>
@@ -365,7 +365,7 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">测试用例</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 5</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span></div></div>
+          <div class="mod-item"><div class="mod-name">测试用例</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 5</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
         </div>
       </div>
     </div>
@@ -608,8 +608,8 @@
 ║  16    已执行数（pass+fail+partial）                           ║
 ║  4        通过数                                                  ║
 ║  5        失败数                                                  ║
-║  0     部分通过数                                               ║
-║  7        跳过数                                                  ║
+║  7     部分通过数                                               ║
+║  0        跳过数                                                  ║
 ║  0     未执行数                                                ║
 ║  25.0   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 5 个（P1:2 P2:3 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
@@ -632,7 +632,7 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">测试用例</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 5</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">测试用例</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 5</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">测试用例</td></tr>
 <tr><td><span class="tc-id">csyl_0486</span></td><td class="tc-name">验证iOS热点链路建立成功</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 翻译眼镜开启热点2. iOS手机启动App，搜索并加入眼镜的热点3. 观察连接状态及通知触发</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">csyl_0487</span></td><td class="tc-name">验证安卓WiFi_Direct链路建立成功</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 安卓设备开启WiFi Direct，发起配对2. App与设备完成直连配对3. 观察连接状态及通知触发</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>

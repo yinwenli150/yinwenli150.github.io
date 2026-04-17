@@ -262,7 +262,7 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">37</div>
-      <div class="stat-sub">本次执行 37 个 · 跳过 7 个 · 未执行 0 个</div>
+      <div class="stat-sub">本次执行 37 个 · 跳过 0 个 · 未执行 0 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
@@ -278,7 +278,7 @@
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
-      <div class="stat-label">跳过 / 阻塞</div>
+      <div class="stat-label">阻塞</div>
       <div class="stat-num">7</div>
       <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 7 条</div>
       <div class="stat-icon">⏭️</div>
@@ -320,8 +320,8 @@
         <div class="legend">
           <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">18 (48.6%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">12 (32.4%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (18.9%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">7</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">阻塞</div><div class="legend-val" style="color:#d97706">7 (18.9%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">0</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">0</div></div>
         </div>
       </div>
@@ -365,9 +365,9 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">AI助手唤醒相关</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 6</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">AI助手使用逻辑</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">异常场景</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 4</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span></div></div>
+          <div class="mod-item"><div class="mod-name">AI助手唤醒相关</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 6</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">AI助手使用逻辑</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">异常场景</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 4</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
         </div>
       </div>
     </div>
@@ -641,8 +641,8 @@
 ║  37    已执行数（pass+fail+partial）                           ║
 ║  18        通过数                                                  ║
 ║  12        失败数                                                  ║
-║  0     部分通过数                                               ║
-║  7        跳过数                                                  ║
+║  7     部分通过数                                               ║
+║  0        跳过数                                                  ║
 ║  0     未执行数                                                ║
 ║  48.6   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 12 个（P1:1 P2:4 P3:7） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
@@ -665,9 +665,9 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">AI助手唤醒相关</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 6</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">AI助手使用逻辑</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">异常场景</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 4</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">AI助手唤醒相关</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 6</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">AI助手使用逻辑</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">异常场景</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 4</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">AI助手唤醒相关</td></tr>
 <tr><td><span class="tc-id fail-id">aizshx_0001</span></td><td class="tc-name">AI助手唤醒词唤醒</td><td class="tc-module">AI助手唤醒相关</td><td><span class="badge-p p1">P1</span></td><td class="step-text">说唤醒词检查眼镜的反馈</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20346994</span></td></tr>
 <tr><td><span class="tc-id">aizshx_0002</span></td><td class="tc-name">AI助手按键唤醒</td><td class="tc-module">AI助手唤醒相关</td><td><span class="badge-p p1">P1</span></td><td class="step-text">长摁两秒AI助手的摁键检查眼镜的反馈</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20347010</span></td></tr>

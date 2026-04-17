@@ -262,7 +262,7 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">37</div>
-      <div class="stat-sub">本次执行 31 个 · 跳过 18 个 · 未执行 6 个</div>
+      <div class="stat-sub">本次执行 31 个 · 跳过 1 个 · 未执行 5 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
@@ -278,7 +278,7 @@
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
-      <div class="stat-label">跳过 / 阻塞</div>
+      <div class="stat-label">阻塞</div>
       <div class="stat-num">18</div>
       <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 18 条</div>
       <div class="stat-icon">⏭️</div>
@@ -320,9 +320,9 @@
         <div class="legend">
           <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">12 (32.4%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">1 (2.7%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (48.6%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">18</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">6</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">阻塞</div><div class="legend-val" style="color:#d97706">18 (48.6%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">1</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">5</div></div>
         </div>
       </div>
     </div>
@@ -365,13 +365,13 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">首页状态</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
-<div class="mod-item"><div class="mod-name">首页操作</div><div class="mod-pills"><span class="pill pill-p">通过 5</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">充电</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 4</span></div></div>
-<div class="mod-item"><div class="mod-name">断开充电</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span></div></div>
-<div class="mod-item"><div class="mod-name">低电量提醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
-<div class="mod-item"><div class="mod-name">自动亮度调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span></div></div>
-<div class="mod-item"><div class="mod-name">屏幕显示调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
+          <div class="mod-item"><div class="mod-name">首页状态</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 1</span></div></div>
+<div class="mod-item"><div class="mod-name">首页操作</div><div class="mod-pills"><span class="pill pill-p">通过 5</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">充电</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 4</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">断开充电</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">低电量提醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">自动亮度调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">屏幕显示调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
         </div>
       </div>
     </div>
@@ -437,7 +437,7 @@
 <tr><td><span class="tc-id blocked-id">syzt_0936</span></td><td class="tc-name">眼镜连接手机，眼镜连接app显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 眼镜连接手机app2. 眼镜连接手机</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382129</span></td></tr>
 <tr><td><span class="tc-id">syzt_0937</span></td><td class="tc-name">眼镜连接手机，眼镜连接app显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜连接手机app2. 眼镜连接手机3. 切换功能同声传译，AI视界，提词器</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">syzt_0938</span></td><td class="tc-name">眼镜连接手机，眼镜连接app显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜连接手机app2. 眼镜连接手机3. 切换功能设置、会议录音</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">syzt_0939</span></td><td class="tc-name">蓝牙遥控器显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 连接蓝牙遥控器2. 断连蓝牙遥控器</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">syzt_0939</span></td><td class="tc-name">蓝牙遥控器显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 连接蓝牙遥控器2. 断连蓝牙遥控器</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">首页操作</td></tr>
 <tr><td><span class="tc-id">sycz_0940</span></td><td class="tc-name">默认功能项显示</td><td class="tc-module">首页操作</td><td><span class="badge-p p1">P1</span></td><td class="step-text">/</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">sycz_0941</span></td><td class="tc-name">向右切换功能项</td><td class="tc-module">首页操作</td><td><span class="badge-p p1">P1</span></td><td class="step-text">触控板从镜片向镜腿滑动</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -636,9 +636,9 @@
 ║  31    已执行数（pass+fail+partial）                           ║
 ║  12        通过数                                                  ║
 ║  1        失败数                                                  ║
-║  0     部分通过数                                               ║
-║  18        跳过数                                                  ║
-║  6     未执行数                                                ║
+║  18     部分通过数                                               ║
+║  1        跳过数                                                  ║
+║  5     未执行数                                                ║
 ║  38.7   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 1 个（P1:0 P2:1 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 18 条 跳过原因简述                                            ║
@@ -660,13 +660,13 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">首页状态</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
-<div class="mod-item"><div class="mod-name">首页操作</div><div class="mod-pills"><span class="pill pill-p">通过 5</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">充电</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 4</span></div></div>
-<div class="mod-item"><div class="mod-name">断开充电</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span></div></div>
-<div class="mod-item"><div class="mod-name">低电量提醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
-<div class="mod-item"><div class="mod-name">自动亮度调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span></div></div>
-<div class="mod-item"><div class="mod-name">屏幕显示调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">首页状态</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 1</span></div></div>
+<div class="mod-item"><div class="mod-name">首页操作</div><div class="mod-pills"><span class="pill pill-p">通过 5</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">充电</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 4</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">断开充电</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 3</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">低电量提醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">自动亮度调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 7</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">屏幕显示调节</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">首页状态</td></tr>
 <tr><td><span class="tc-id">syzt_0932</span></td><td class="tc-name">眼镜未连接手机显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">眼镜开机/点亮屏幕</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">syzt_0933</span></td><td class="tc-name">眼镜连接手机显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">手机蓝牙连接眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382129</span></td></tr>
@@ -675,7 +675,7 @@
 <tr><td><span class="tc-id blocked-id">syzt_0936</span></td><td class="tc-name">眼镜连接手机，眼镜连接app显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 眼镜连接手机app2. 眼镜连接手机</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382129</span></td></tr>
 <tr><td><span class="tc-id">syzt_0937</span></td><td class="tc-name">眼镜连接手机，眼镜连接app显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜连接手机app2. 眼镜连接手机3. 切换功能同声传译，AI视界，提词器</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">syzt_0938</span></td><td class="tc-name">眼镜连接手机，眼镜连接app显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 眼镜连接手机app2. 眼镜连接手机3. 切换功能设置、会议录音</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">syzt_0939</span></td><td class="tc-name">蓝牙遥控器显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 连接蓝牙遥控器2. 断连蓝牙遥控器</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">syzt_0939</span></td><td class="tc-name">蓝牙遥控器显示</td><td class="tc-module">首页状态</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 连接蓝牙遥控器2. 断连蓝牙遥控器</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">首页操作</td></tr>
 <tr><td><span class="tc-id">sycz_0940</span></td><td class="tc-name">默认功能项显示</td><td class="tc-module">首页操作</td><td><span class="badge-p p1">P1</span></td><td class="step-text">/</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">sycz_0941</span></td><td class="tc-name">向右切换功能项</td><td class="tc-module">首页操作</td><td><span class="badge-p p1">P1</span></td><td class="step-text">触控板从镜片向镜腿滑动</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>

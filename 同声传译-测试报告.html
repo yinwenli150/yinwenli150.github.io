@@ -262,7 +262,7 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">33</div>
-      <div class="stat-sub">本次执行 22 个 · 跳过 2 个 · 未执行 11 个</div>
+      <div class="stat-sub">本次执行 22 个 · 跳过 2 个 · 未执行 9 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
@@ -278,7 +278,7 @@
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
-      <div class="stat-label">跳过 / 阻塞</div>
+      <div class="stat-label">阻塞</div>
       <div class="stat-num">2</div>
       <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 2 条</div>
       <div class="stat-icon">⏭️</div>
@@ -320,9 +320,9 @@
         <div class="legend">
           <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">17 (51.5%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">3 (9.1%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (6.1%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">阻塞</div><div class="legend-val" style="color:#d97706">2 (6.1%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">2</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">11</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">9</div></div>
         </div>
       </div>
     </div>
@@ -365,10 +365,10 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">旁听同传唤醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">旁听同传翻译设置_流程</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">旁听同传历史记录保存</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">旁听同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
+          <div class="mod-item"><div class="mod-name">旁听同传唤醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">旁听同传翻译设置_流程</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 2</span></div></div>
+<div class="mod-item"><div class="mod-name">旁听同传历史记录保存</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">旁听同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
         </div>
       </div>
     </div>
@@ -437,8 +437,8 @@
 <tr><td><span class="tc-id fail-id">pttcfy_0043</span></td><td class="tc-name">眼镜使用中分段逻辑检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0044</span></td><td class="tc-name">旁听同传手机息屏使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.APP进入使用同传翻译2.使用过程中手机息屏观察使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0045</span></td><td class="tc-name">旁听同传使用中眼镜显示内容检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">验证翻译显示:眼镜端显示对方声音的原文、译文支持</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
-<tr><td><span class="tc-id">pttcfy_0046</span></td><td class="tc-name">旁听同传使用中切换字体大小-持续使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pttcfy_0047</span></td><td class="tc-name">旁听同传使用中切换字体大小-暂停</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcfy_0046</span></td><td class="tc-name">旁听同传使用中切换字体大小-持续使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcfy_0047</span></td><td class="tc-name">旁听同传使用中切换字体大小-暂停</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0048</span></td><td class="tc-name">旁听同传使用中暂停的时长校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355156</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0049</span></td><td class="tc-name">旁听同传使用中沉浸式校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20359794</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0050</span></td><td class="tc-name">旁听同传译文播报功能</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">检查译文播报的默认配置</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -629,9 +629,9 @@
 ║  22    已执行数（pass+fail+partial）                           ║
 ║  17        通过数                                                  ║
 ║  3        失败数                                                  ║
-║  0     部分通过数                                               ║
+║  2     部分通过数                                               ║
 ║  2        跳过数                                                  ║
-║  11     未执行数                                                ║
+║  9     未执行数                                                ║
 ║  77.3   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 3 个（P1:0 P2:3 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 2 条 跳过原因简述                                            ║
@@ -653,10 +653,10 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">旁听同传唤醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">旁听同传翻译设置_流程</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">旁听同传历史记录保存</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">旁听同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">旁听同传唤醒</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">旁听同传翻译设置_流程</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 2</span></div></div>
+<div class="mod-item"><div class="mod-name">旁听同传历史记录保存</div><div class="mod-pills"><span class="pill pill-p">通过 1</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">旁听同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">旁听同传唤醒</td></tr>
 <tr><td><span class="tc-id blocked-id">pttchx_0038</span></td><td class="tc-name">旁听同传语言指令唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p2">P2</span></td><td class="step-text">功能开启方式1 - 眼镜端语音指令:说&quot;小飞小飞，开启旁听同传&quot;</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">pttchx_0039</span></td><td class="tc-name">旁听同传触控唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p2">P2</span></td><td class="step-text">功能开启方式2 - 眼镜端触控板:在launcher页面，焦点选中&quot;旁听同传&quot;双击触控板</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20346758</span></td></tr>
@@ -667,8 +667,8 @@
 <tr><td><span class="tc-id fail-id">pttcfy_0043</span></td><td class="tc-name">眼镜使用中分段逻辑检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0044</span></td><td class="tc-name">旁听同传手机息屏使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.APP进入使用同传翻译2.使用过程中手机息屏观察使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0045</span></td><td class="tc-name">旁听同传使用中眼镜显示内容检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">验证翻译显示:眼镜端显示对方声音的原文、译文支持</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
-<tr><td><span class="tc-id">pttcfy_0046</span></td><td class="tc-name">旁听同传使用中切换字体大小-持续使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pttcfy_0047</span></td><td class="tc-name">旁听同传使用中切换字体大小-暂停</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcfy_0046</span></td><td class="tc-name">旁听同传使用中切换字体大小-持续使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcfy_0047</span></td><td class="tc-name">旁听同传使用中切换字体大小-暂停</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0048</span></td><td class="tc-name">旁听同传使用中暂停的时长校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355156</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0049</span></td><td class="tc-name">旁听同传使用中沉浸式校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20359794</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0050</span></td><td class="tc-name">旁听同传译文播报功能</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">检查译文播报的默认配置</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>

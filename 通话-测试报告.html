@@ -262,7 +262,7 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">25</div>
-      <div class="stat-sub">本次执行 20 个 · 跳过 0 个 · 未执行 5 个</div>
+      <div class="stat-sub">本次执行 20 个 · 跳过 4 个 · 未执行 1 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
@@ -278,7 +278,7 @@
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
-      <div class="stat-label">跳过 / 阻塞</div>
+      <div class="stat-label">阻塞</div>
       <div class="stat-num">0</div>
       <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 0 条</div>
       <div class="stat-icon">⏭️</div>
@@ -320,9 +320,9 @@
         <div class="legend">
           <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">18 (72.0%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">2 (8.0%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (0.0%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">0</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">5</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">阻塞</div><div class="legend-val" style="color:#d97706">0 (0.0%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">4</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">1</div></div>
         </div>
       </div>
     </div>
@@ -365,9 +365,9 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">来电中</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">拨号中</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">通话中</div><div class="mod-pills"><span class="pill pill-p">通过 6</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
+          <div class="mod-item"><div class="mod-name">来电中</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 1</span></div></div>
+<div class="mod-item"><div class="mod-name">拨号中</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">通话中</div><div class="mod-pills"><span class="pill pill-p">通过 6</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 3</span></div></div>
         </div>
       </div>
     </div>
@@ -428,7 +428,7 @@
           <tr class="group-row"><td colspan="6">来电中</td></tr>
 <tr><td><span class="tc-id">ldz_0261</span></td><td class="tc-name">验证眼镜佩戴状态下来电铃声播放</td><td class="tc-module">来电中</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.手机静音或震动模式，测试机来电 2.手机非静音模式，测试机来电</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">ldz_0262</span></td><td class="tc-name">验证其他应用提示音时来电不冲突</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">播放提示音如闹钟或消息提示时，测试机来电</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">ldz_0263</span></td><td class="tc-name">验证眼镜未佩戴时来电后佩戴接听</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.测试机来电 2.响铃20秒后取出眼镜佩戴 3.通过眼镜触控接听来电</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20330354</span></td></tr>
+<tr><td><span class="tc-id">ldz_0263</span></td><td class="tc-name">验证眼镜未佩戴时来电后佩戴接听</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.测试机来电 2.响铃20秒后取出眼镜佩戴 3.通过眼镜触控接听来电</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20330354</span></td></tr>
 <tr><td><span class="tc-id">ldz_0264</span></td><td class="tc-name">验证来电自动超时挂断</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">测试机来电，等待来电响铃自动超时</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">ldz_0265</span></td><td class="tc-name">验证手机端拒接来电</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.辅助机给测试机拨打电话 2.测试机来电，在手机端点击拒绝</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">拨号中</td></tr>
@@ -444,11 +444,11 @@
 <tr class="group-row"><td colspan="6">通话中</td></tr>
 <tr><td><span class="tc-id">thz_0266</span></td><td class="tc-name">验证眼镜端触控接听和挂断通话</td><td class="tc-module">通话中</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.辅助机给测试机拨打电话 2.测试机来电，通过眼镜触控区域接听 3.通话2分钟，通过眼镜触控区域挂断</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20340443</span></td></tr>
 <tr><td><span class="tc-id">thz_0267</span></td><td class="tc-name">验证手机端接听和挂断通话</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.辅助机给测试机拨打电话 2.测试机来电，在手机端点击接听 3.通话2分钟，在手机端点击挂断</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">thz_0268</span></td><td class="tc-name">验证眼镜入盒后通话音频切换</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">将眼镜摘下放入眼镜盒并关盖</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">thz_0269</span></td><td class="tc-name">验证眼镜入盒后重新佩戴通话恢复</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">thz_0268</span></td><td class="tc-name">验证眼镜入盒后通话音频切换</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">将眼镜摘下放入眼镜盒并关盖</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">thz_0269</span></td><td class="tc-name">验证眼镜入盒后重新佩戴通话恢复</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">thz_0270</span></td><td class="tc-name">验证通话中音频在手机和眼镜间切换</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.测试机来电并接听通话 2.通话界面选择音频输出为手机听筒 3.手机上长按音量键调节听筒音量至最大或最小 4.1分钟后再选择切换为眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">thz_0271</span></td><td class="tc-name">验证手机端调节通话音量</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通话中手机端长按音量上键至最大音量 2.通话中手机端长按音量下键至最小音量</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">thz_0272</span></td><td class="tc-name">验证眼镜入盒后重新佩戴音量保持</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴 3.观察通话音量</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">thz_0272</span></td><td class="tc-name">验证眼镜入盒后重新佩戴音量保持</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴 3.观察通话音量</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">thz_0273</span></td><td class="tc-name">验证通话中蓝牙重连后音量保持</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.在测试机下拉状态栏关闭蓝牙，调节手机音量 2.重新开启蓝牙连接眼镜 3.观察通话音量</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">thz_0274</span></td><td class="tc-name">验证通话中眼镜超距断连后重连</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜远离测试机直到蓝牙断连 2.眼镜靠近测试机重新连接 3.观察通话音量</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20330354</span></td></tr>
 <tr><td><span class="tc-id">thz_0275</span></td><td class="tc-name">验证通话中眼镜摘下后重新佩戴</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通话中将眼镜摘下但不放入盒中 2.再次佩戴眼镜进行通话</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -618,8 +618,8 @@
 ║  18        通过数                                                  ║
 ║  2        失败数                                                  ║
 ║  0     部分通过数                                               ║
-║  0        跳过数                                                  ║
-║  5     未执行数                                                ║
+║  4        跳过数                                                  ║
+║  1     未执行数                                                ║
 ║  90.0   执行通过率（保留1位小数，如：88.9）                       ║
 ║  失败 2 个（P1:0 P2:2 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 0 条 跳过原因简述                                            ║
@@ -641,13 +641,13 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">来电中</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">拨号中</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">通话中</div><div class="mod-pills"><span class="pill pill-p">通过 6</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">来电中</div><div class="mod-pills"><span class="pill pill-p">通过 4</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 1</span></div></div>
+<div class="mod-item"><div class="mod-name">拨号中</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 0</span></div></div>
+<div class="mod-item"><div class="mod-name">通话中</div><div class="mod-pills"><span class="pill pill-p">通过 6</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span><span class="pill pill-s" style="background:#f3f4f6;color:#6b7280">跳过 3</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">来电中</td></tr>
 <tr><td><span class="tc-id">ldz_0261</span></td><td class="tc-name">验证眼镜佩戴状态下来电铃声播放</td><td class="tc-module">来电中</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.手机静音或震动模式，测试机来电 2.手机非静音模式，测试机来电</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">ldz_0262</span></td><td class="tc-name">验证其他应用提示音时来电不冲突</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">播放提示音如闹钟或消息提示时，测试机来电</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">ldz_0263</span></td><td class="tc-name">验证眼镜未佩戴时来电后佩戴接听</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.测试机来电 2.响铃20秒后取出眼镜佩戴 3.通过眼镜触控接听来电</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20330354</span></td></tr>
+<tr><td><span class="tc-id">ldz_0263</span></td><td class="tc-name">验证眼镜未佩戴时来电后佩戴接听</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.测试机来电 2.响铃20秒后取出眼镜佩戴 3.通过眼镜触控接听来电</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20330354</span></td></tr>
 <tr><td><span class="tc-id">ldz_0264</span></td><td class="tc-name">验证来电自动超时挂断</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">测试机来电，等待来电响铃自动超时</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">ldz_0265</span></td><td class="tc-name">验证手机端拒接来电</td><td class="tc-module">来电中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.辅助机给测试机拨打电话 2.测试机来电，在手机端点击拒绝</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">拨号中</td></tr>
@@ -663,11 +663,11 @@
 <tr class="group-row"><td colspan="6">通话中</td></tr>
 <tr><td><span class="tc-id">thz_0266</span></td><td class="tc-name">验证眼镜端触控接听和挂断通话</td><td class="tc-module">通话中</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.辅助机给测试机拨打电话 2.测试机来电，通过眼镜触控区域接听 3.通话2分钟，通过眼镜触控区域挂断</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20340443</span></td></tr>
 <tr><td><span class="tc-id">thz_0267</span></td><td class="tc-name">验证手机端接听和挂断通话</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.辅助机给测试机拨打电话 2.测试机来电，在手机端点击接听 3.通话2分钟，在手机端点击挂断</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">thz_0268</span></td><td class="tc-name">验证眼镜入盒后通话音频切换</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">将眼镜摘下放入眼镜盒并关盖</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">thz_0269</span></td><td class="tc-name">验证眼镜入盒后重新佩戴通话恢复</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">thz_0268</span></td><td class="tc-name">验证眼镜入盒后通话音频切换</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">将眼镜摘下放入眼镜盒并关盖</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">thz_0269</span></td><td class="tc-name">验证眼镜入盒后重新佩戴通话恢复</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">thz_0270</span></td><td class="tc-name">验证通话中音频在手机和眼镜间切换</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.测试机来电并接听通话 2.通话界面选择音频输出为手机听筒 3.手机上长按音量键调节听筒音量至最大或最小 4.1分钟后再选择切换为眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">thz_0271</span></td><td class="tc-name">验证手机端调节通话音量</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通话中手机端长按音量上键至最大音量 2.通话中手机端长按音量下键至最小音量</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">thz_0272</span></td><td class="tc-name">验证眼镜入盒后重新佩戴音量保持</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴 3.观察通话音量</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">thz_0272</span></td><td class="tc-name">验证眼镜入盒后重新佩戴音量保持</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.将眼镜摘下放入眼镜盒并关盖 2.重新打开眼镜盒取出眼镜佩戴 3.观察通话音量</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>跳过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">thz_0273</span></td><td class="tc-name">验证通话中蓝牙重连后音量保持</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.在测试机下拉状态栏关闭蓝牙，调节手机音量 2.重新开启蓝牙连接眼镜 3.观察通话音量</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">thz_0274</span></td><td class="tc-name">验证通话中眼镜超距断连后重连</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜远离测试机直到蓝牙断连 2.眼镜靠近测试机重新连接 3.观察通话音量</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20330354</span></td></tr>
 <tr><td><span class="tc-id">thz_0275</span></td><td class="tc-name">验证通话中眼镜摘下后重新佩戴</td><td class="tc-module">通话中</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通话中将眼镜摘下但不放入盒中 2.再次佩戴眼镜进行通话</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
