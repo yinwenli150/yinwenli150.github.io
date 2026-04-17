@@ -262,19 +262,19 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">126</div>
-      <div class="stat-sub">本次执行 23 个 · 跳过 10 个 · 未执行 103 个</div>
+      <div class="stat-sub">本次执行 29 个 · 跳过 10 个 · 未执行 97 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
       <div class="stat-label">通过</div>
-      <div class="stat-num">8</div>
-      <div class="stat-sub">执行通过率 <strong style="color:#15803d">34.8%</strong>（8/23）</div>
+      <div class="stat-num">10</div>
+      <div class="stat-sub">执行通过率 <strong style="color:#15803d">34.5%</strong>（10/29）</div>
       <div class="stat-icon">✅</div>
     </div>
     <div class="stat-card fail">
       <div class="stat-label">失败 / 缺陷</div>
-      <div class="stat-num">5</div>
-      <div class="stat-sub">失败 5 个（P1:3 P2:2 P3:0）</div>
+      <div class="stat-num">9</div>
+      <div class="stat-sub">失败 9 个（P1:3 P2:6 P3:0）</div>
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
@@ -302,27 +302,27 @@
         -->
         <svg class="donut-svg" viewBox="0 0 160 160">
           <circle class="donut-track" cx="80" cy="80" r="65"/>
-          <!-- PASS → 25.9 382.5 offset 0 -->
+          <!-- PASS → 32.4 376.0 offset 0 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#16a34a"
-            stroke-dasharray="25.9 382.5" stroke-dashoffset="0"/>
-          <!-- FAIL → 16.2 392.2 offset -25.9 -->
+            stroke-dasharray="32.4 376.0" stroke-dashoffset="0"/>
+          <!-- FAIL → 29.2 379.2 offset -32.4 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#dc2626"
-            stroke-dasharray="16.2 392.2" stroke-dashoffset="-25.9"/>
-          <!-- PARTIAL → 32.4 376.0 offset -42.1 -->
+            stroke-dasharray="29.2 379.2" stroke-dashoffset="-32.4"/>
+          <!-- PARTIAL → 32.4 376.0 offset -61.6 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#f59e0b"
-            stroke-dasharray="32.4 376.0" stroke-dashoffset="-42.1"/>
+            stroke-dasharray="32.4 376.0" stroke-dashoffset="-61.6"/>
           <!-- 中心文字（rotate 90 抵消父元素旋转） -->
           <text x="80" y="74" text-anchor="middle" transform="rotate(90,80,80)"
-            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">34.8%</text>
+            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">34.5%</text>
           <text x="80" y="94" text-anchor="middle" transform="rotate(90,80,80)"
             style="font-size:10px;fill:#64748b;font-family:system-ui">通过率</text>
         </svg>
         <div class="legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">8 (6.3%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">5 (4.0%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">10 (7.9%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">9 (7.1%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (7.9%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">10</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">103</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">97</div></div>
         </div>
       </div>
     </div>
@@ -342,8 +342,8 @@
           </div>
           <!-- P2 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">3 通过 / 2 失败 / 83 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p2" style="width:3.6%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">5 通过 / 6 失败 / 83 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p2" style="width:6.0%"></div></div>
           </div>
           <!-- P3 -->
           <div class="pbar-row">
@@ -365,7 +365,7 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">灯语</div><div class="mod-pills"><span class="pill pill-p">通过 5</span><span class="pill pill-f">失败 4</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
+          <div class="mod-item"><div class="mod-name">灯语</div><div class="mod-pills"><span class="pill pill-p">通过 7</span><span class="pill pill-f">失败 8</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
 <div class="mod-item"><div class="mod-name">眼镜盒灯语</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
 <div class="mod-item"><div class="mod-name">提示音</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 9</span></div></div>
         </div>
@@ -380,7 +380,7 @@
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#15803d">✅ 质量亮点</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li>已执行用例中通过率 34.8%，阻塞用例 10 条待后续补充验证</li>
+          <li>已执行用例中通过率 34.5%，阻塞用例 10 条待后续补充验证</li>
           <!-- 每条：<li>亮点描述</li> -->
         </ul>
       </div>
@@ -388,7 +388,7 @@
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#b91c1c">⚠️ 风险 & 改进建议</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
           <li><strong>P1 缺陷遗留：</strong>存在 3 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 2 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+<li><strong>P2 缺陷遗留：</strong>存在 6 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
 <li><strong>阻塞用例较多：</strong>10 条用例（占比 7.9%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
           <!-- 每条：<li><strong>BUG/风险名：</strong>描述</li> -->
         </ul>
@@ -398,7 +398,7 @@
     <div style="margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-radius:8px;border-left:4px solid #2563eb">
       <div style="font-size:13px;color:#1e40af;font-weight:600;margin-bottom:4px">🎯 上线准入评估</div>
       <div style="font-size:13px;color:#374151;line-height:1.7">
-        <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 15.6%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 3.6%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 0.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
+        <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 15.6%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 6.0%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 0.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
       </div>
     </div>
   </div>
@@ -408,7 +408,7 @@
 <div class="tab-panel" id="panel-1">
   <div class="section-header">
     <h2>📋 用例执行明细</h2>
-    <div class="section-badge">已执行 23 个</div>
+    <div class="section-badge">已执行 29 个</div>
     <div class="section-line"></div>
   </div>
   <div class="card" style="padding:0">
@@ -446,16 +446,16 @@
 <tr><td><span class="tc-id">dy_0857</span></td><td class="tc-name">使用录像功能</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制30s后长按右镜腿物理键2s</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20370044</span></td></tr>
 <tr><td><span class="tc-id">dy_0858</span></td><td class="tc-name">使用相机功能</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击右镜腿物理键2. 聚焦3s自动拍照</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0859</span></td><td class="tc-name">使用提词功能</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. APP页面选择文件开启提词器2. 退出提词器</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0860</span></td><td class="tc-name">接打电话-听音乐</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 接听&amp;拨打电话2. 手机播放音乐</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0861</span></td><td class="tc-name">眼镜折叠镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下佩戴眼镜折叠镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">dy_0860</span></td><td class="tc-name">接打电话-听音乐</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 接听&amp;拨打电话2. 手机播放音乐</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">dy_0861</span></td><td class="tc-name">眼镜折叠镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下佩戴眼镜折叠镜腿</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0862</span></td><td class="tc-name">眼镜放回眼镜盒(错误位置)</td><td class="tc-module">灯语</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 眼镜放回眼镜盒错误位置</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0863</span></td><td class="tc-name">眼镜放回眼镜盒(眼镜开机)</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 眼镜放回眼镜盒</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0864</span></td><td class="tc-name">眼镜放回眼镜盒(眼镜关机)</td><td class="tc-module">灯语</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 眼镜放回眼镜盒</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">dy_0865</span></td><td class="tc-name">眼镜使用充电线-折叠</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 折叠眼镜镜腿</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
-<tr><td><span class="tc-id">dy_0866</span></td><td class="tc-name">眼镜使用充电线-打开镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开眼镜镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0867</span></td><td class="tc-name">眼镜使用充电线-录像</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制1min后长按右镜腿物理键2s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0868</span></td><td class="tc-name">眼镜使用充电线-拍照</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 点击右物理镜腿2. 聚焦3s自动拍照</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0869</span></td><td class="tc-name">眼镜使用充电线-佩戴眼镜</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 佩戴眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id fail-id">dy_0866</span></td><td class="tc-name">眼镜使用充电线-打开镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开眼镜镜腿</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
+<tr><td><span class="tc-id fail-id">dy_0867</span></td><td class="tc-name">眼镜使用充电线-录像</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制1min后长按右镜腿物理键2s</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
+<tr><td><span class="tc-id fail-id">dy_0868</span></td><td class="tc-name">眼镜使用充电线-拍照</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 点击右物理镜腿2. 聚焦3s自动拍照</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
+<tr><td><span class="tc-id fail-id">dy_0869</span></td><td class="tc-name">眼镜使用充电线-佩戴眼镜</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 佩戴眼镜</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
 <tr><td><span class="tc-id">dy_0870</span></td><td class="tc-name">眼镜使用电池包-折叠</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 折叠眼镜镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0871</span></td><td class="tc-name">眼镜使用电池包-打开镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开眼镜镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0872</span></td><td class="tc-name">眼镜使用电池包-录像</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制1min后长按右镜腿物理键2s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -592,7 +592,7 @@
 <div class="tab-panel" id="panel-2">
   <div class="section-header">
     <h2>🐛 缺陷汇总</h2>
-    <div class="section-badge">共 5 个</div>
+    <div class="section-badge">共 9 个</div>
     <div class="section-line"></div>
   </div>
   <div class="bugs-list">
@@ -601,6 +601,10 @@
 <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20322238?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20322238</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】最大音量正在收听提示音爆音</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">唤醒AI助手</div><div class="bug-meta"><span class="bug-tag">模块：提示音</span><span class="bug-tag">关联：aizs_0908</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382688?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382688</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】已配对设备断开蓝牙会有蓝灯闪烁</div><div style="color:#6b7280;line-height:1.5;">状态：待验证 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜断连</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0852</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382688?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382688</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】已配对设备断开蓝牙会有蓝灯闪烁</div><div style="color:#6b7280;line-height:1.5;">状态：待验证 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">超距断连</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0853</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-打开镜腿</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0866</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-7</span></div><div class="bug-title">眼镜使用充电线-录像</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0867</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-拍照</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0868</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-佩戴眼镜</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0869</span></div></div></div>
     <!--
       每个缺陷一块：
       <div class="bug-card">
@@ -652,14 +656,14 @@
       <div class="env-item"><div class="env-label">执行方式</div><div class="env-val">手动测试</div></div>
       <div class="env-item"><div class="env-label">浏览器</div><div class="env-val">N/A（端侧设备）</div></div>
       <div class="env-item"><div class="env-label">测试类型</div><div class="env-val">功能测试（手动）</div></div>
-      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">灯语提示音-1776248839272.csv</div></div>
-      <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.76</div></div>
+      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">灯语提示音-1776334148590.csv</div></div>
+      <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.78</div></div>
     </div>
     <div style="margin-top:24px">
       <div class="card-title" style="margin-bottom:16px">⏱️ 测试执行时间线</div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>灯语提示音测试</strong><span>执行 126 条用例：通过 8、失败 5、阻塞 10</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>灯语提示音测试</strong><span>执行 126 条用例：通过 10、失败 9、阻塞 10</span></div></div>
 <div class="tl-item"><div class="tl-time">2026-04-16</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 无法上线</span></div></div>
         <!--
           每个节点：
@@ -714,31 +718,31 @@
 ║  端侧(RTOS) + APP(Android)          测试环境 URL                                            ║
 ║  手动测试      执行方式，如：Playwright MCP 辅助手动测试                 ║
 ║  N/A（端侧设备）          浏览器，如：Chromium（Headed 模式）                      ║
-║  灯语提示音-1776248839272.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
-║  0.0.0.76     测试版本，如：v1.1（需求文档版本）                        ║
+║  灯语提示音-1776334148590.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
+║  0.0.0.78     测试版本，如：v1.1（需求文档版本）                        ║
 ║                                                                              ║
 ║  【统计数字】（来自阶段三执行汇总）                                              ║
 ║  126       用例总数                                                ║
-║  23    已执行数（pass+fail+partial）                           ║
-║  8        通过数                                                  ║
-║  5        失败数                                                  ║
+║  29    已执行数（pass+fail+partial）                           ║
+║  10        通过数                                                  ║
+║  9        失败数                                                  ║
 ║  0     部分通过数                                               ║
 ║  10        跳过数                                                  ║
-║  103     未执行数                                                ║
-║  34.8   执行通过率（保留1位小数，如：88.9）                       ║
-║  失败 5 个（P1:3 P2:2 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
+║  97     未执行数                                                ║
+║  34.5   执行通过率（保留1位小数，如：88.9）                       ║
+║  失败 9 个（P1:3 P2:6 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 10 条 跳过原因简述                                            ║
 ║                                                                              ║
 ║  【SVG 甜甜圈计算】（C = 2×π×65 ≈ 408.4）                                    ║
-║  25.9    pass/executed × 408.4（保留1位小数）                   ║
-║  382.5    408.4 - PASS_LEN                                      ║
-║  16.2    fail/executed × 408.4                                 ║
-║  392.2    408.4 - FAIL_LEN                                      ║
+║  32.4    pass/executed × 408.4（保留1位小数）                   ║
+║  376.0    408.4 - PASS_LEN                                      ║
+║  29.2    fail/executed × 408.4                                 ║
+║  379.2    408.4 - FAIL_LEN                                      ║
 ║  32.4    partial/executed × 408.4                              ║
 ║  376.0    408.4 - PART_LEN                                      ║
-║  42.1 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
-║  6.3    pass/executed 的百分比（保留1位小数）                   ║
-║  4.0    fail/executed 的百分比                                 ║
+║  61.6 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
+║  7.9    pass/executed 的百分比（保留1位小数）                   ║
+║  7.1    fail/executed 的百分比                                 ║
 ║  7.9    partial/executed 的百分比                              ║
 ║                                                                              ║
 ║  【优先级分布】                                                                ║
@@ -746,7 +750,7 @@
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">灯语</div><div class="mod-pills"><span class="pill pill-p">通过 5</span><span class="pill pill-f">失败 4</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
+║  <div class="mod-item"><div class="mod-name">灯语</div><div class="mod-pills"><span class="pill pill-p">通过 7</span><span class="pill pill-f">失败 8</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 1</span></div></div>
 <div class="mod-item"><div class="mod-name">眼镜盒灯语</div><div class="mod-pills"><span class="pill pill-p">通过 0</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
 <div class="mod-item"><div class="mod-name">提示音</div><div class="mod-pills"><span class="pill pill-p">通过 3</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 9</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">灯语</td></tr>
@@ -769,16 +773,16 @@
 <tr><td><span class="tc-id">dy_0857</span></td><td class="tc-name">使用录像功能</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制30s后长按右镜腿物理键2s</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20370044</span></td></tr>
 <tr><td><span class="tc-id">dy_0858</span></td><td class="tc-name">使用相机功能</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 单击右镜腿物理键2. 聚焦3s自动拍照</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0859</span></td><td class="tc-name">使用提词功能</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. APP页面选择文件开启提词器2. 退出提词器</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0860</span></td><td class="tc-name">接打电话-听音乐</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 接听&amp;拨打电话2. 手机播放音乐</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0861</span></td><td class="tc-name">眼镜折叠镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下佩戴眼镜折叠镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">dy_0860</span></td><td class="tc-name">接打电话-听音乐</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 接听&amp;拨打电话2. 手机播放音乐</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">dy_0861</span></td><td class="tc-name">眼镜折叠镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下佩戴眼镜折叠镜腿</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0862</span></td><td class="tc-name">眼镜放回眼镜盒(错误位置)</td><td class="tc-module">灯语</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 眼镜放回眼镜盒错误位置</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0863</span></td><td class="tc-name">眼镜放回眼镜盒(眼镜开机)</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 眼镜放回眼镜盒</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0864</span></td><td class="tc-name">眼镜放回眼镜盒(眼镜关机)</td><td class="tc-module">灯语</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 眼镜放回眼镜盒</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">dy_0865</span></td><td class="tc-name">眼镜使用充电线-折叠</td><td class="tc-module">灯语</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 折叠眼镜镜腿</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
-<tr><td><span class="tc-id">dy_0866</span></td><td class="tc-name">眼镜使用充电线-打开镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开眼镜镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0867</span></td><td class="tc-name">眼镜使用充电线-录像</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制1min后长按右镜腿物理键2s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0868</span></td><td class="tc-name">眼镜使用充电线-拍照</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 点击右物理镜腿2. 聚焦3s自动拍照</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">dy_0869</span></td><td class="tc-name">眼镜使用充电线-佩戴眼镜</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 佩戴眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id fail-id">dy_0866</span></td><td class="tc-name">眼镜使用充电线-打开镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开眼镜镜腿</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
+<tr><td><span class="tc-id fail-id">dy_0867</span></td><td class="tc-name">眼镜使用充电线-录像</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制1min后长按右镜腿物理键2s</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
+<tr><td><span class="tc-id fail-id">dy_0868</span></td><td class="tc-name">眼镜使用充电线-拍照</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 点击右物理镜腿2. 聚焦3s自动拍照</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
+<tr><td><span class="tc-id fail-id">dy_0869</span></td><td class="tc-name">眼镜使用充电线-佩戴眼镜</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 佩戴眼镜</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20378587</span></td></tr>
 <tr><td><span class="tc-id">dy_0870</span></td><td class="tc-name">眼镜使用电池包-折叠</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 折叠眼镜镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0871</span></td><td class="tc-name">眼镜使用电池包-打开镜腿</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 打开眼镜镜腿</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">dy_0872</span></td><td class="tc-name">眼镜使用电池包-录像</td><td class="tc-module">灯语</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 长按右镜腿物理键2s2. 录制1min后长按右镜腿物理键2s</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -883,14 +887,18 @@
 <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-折叠</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0865</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20322238?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20322238</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】最大音量正在收听提示音爆音</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">唤醒AI助手</div><div class="bug-meta"><span class="bug-tag">模块：提示音</span><span class="bug-tag">关联：aizs_0908</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382688?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382688</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】已配对设备断开蓝牙会有蓝灯闪烁</div><div style="color:#6b7280;line-height:1.5;">状态：待验证 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜断连</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0852</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382688?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382688</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】已配对设备断开蓝牙会有蓝灯闪烁</div><div style="color:#6b7280;line-height:1.5;">状态：待验证 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">超距断连</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0853</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
-║  <li>已执行用例中通过率 34.8%，阻塞用例 10 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382688?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382688</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】已配对设备断开蓝牙会有蓝灯闪烁</div><div style="color:#6b7280;line-height:1.5;">状态：待验证 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">超距断连</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0853</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-打开镜腿</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0866</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-7</span></div><div class="bug-title">眼镜使用充电线-录像</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0867</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-拍照</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0868</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20378587?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20378587</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜连接充电器，充电时电量灯语显示不符合视觉交互稿</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：一般 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用充电线-佩戴眼镜</div><div class="bug-meta"><span class="bug-tag">模块：灯语</span><span class="bug-tag">关联：dy_0869</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
+║  <li>已执行用例中通过率 34.5%，阻塞用例 10 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
 ║  <li><strong>P1 缺陷遗留：</strong>存在 3 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 2 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+<li><strong>P2 缺陷遗留：</strong>存在 6 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
 <li><strong>阻塞用例较多：</strong>10 条用例（占比 7.9%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
-║  <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 15.6%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 3.6%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 0.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
+║  <strong style="color:#b91c1c">❌ 无法上线</strong><br>❌ P1 通过率 15.6%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 6.0%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 0.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
 ║  <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>灯语提示音测试</strong><span>执行 126 条用例：通过 8、失败 5、阻塞 10</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>灯语提示音测试</strong><span>执行 126 条用例：通过 10、失败 9、阻塞 10</span></div></div>
 <div class="tl-item"><div class="tl-time">2026-04-16</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 无法上线</span></div></div>     时间线节点（.tl-item 列表）                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
