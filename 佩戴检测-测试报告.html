@@ -262,19 +262,19 @@
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
       <div class="stat-num">35</div>
-      <div class="stat-sub">本次执行 33 个 · 跳过 8 个 · 未执行 2 个</div>
+      <div class="stat-sub">本次执行 31 个 · 跳过 8 个 · 未执行 4 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
       <div class="stat-label">通过</div>
-      <div class="stat-num">21</div>
-      <div class="stat-sub">执行通过率 <strong style="color:#15803d">63.6%</strong>（21/33）</div>
+      <div class="stat-num">20</div>
+      <div class="stat-sub">执行通过率 <strong style="color:#15803d">64.5%</strong>（20/31）</div>
       <div class="stat-icon">✅</div>
     </div>
     <div class="stat-card fail">
       <div class="stat-label">失败 / 缺陷</div>
-      <div class="stat-num">4</div>
-      <div class="stat-sub">失败 4 个（P1:2 P2:2 P3:0）</div>
+      <div class="stat-num">3</div>
+      <div class="stat-sub">失败 3 个（P1:0 P2:3 P3:0）</div>
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
@@ -302,27 +302,27 @@
         -->
         <svg class="donut-svg" viewBox="0 0 160 160">
           <circle class="donut-track" cx="80" cy="80" r="65"/>
-          <!-- PASS → 245.0 163.4 offset 0 -->
+          <!-- PASS → 233.4 175.0 offset 0 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#16a34a"
-            stroke-dasharray="245.0 163.4" stroke-dashoffset="0"/>
-          <!-- FAIL → 46.7 361.7 offset -245.0 -->
+            stroke-dasharray="233.4 175.0" stroke-dashoffset="0"/>
+          <!-- FAIL → 35.0 373.4 offset -233.4 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#dc2626"
-            stroke-dasharray="46.7 361.7" stroke-dashoffset="-245.0"/>
-          <!-- PARTIAL → 93.3 315.1 offset -291.7 -->
+            stroke-dasharray="35.0 373.4" stroke-dashoffset="-233.4"/>
+          <!-- PARTIAL → 93.3 315.1 offset -268.4 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#f59e0b"
-            stroke-dasharray="93.3 315.1" stroke-dashoffset="-291.7"/>
+            stroke-dasharray="93.3 315.1" stroke-dashoffset="-268.4"/>
           <!-- 中心文字（rotate 90 抵消父元素旋转） -->
           <text x="80" y="74" text-anchor="middle" transform="rotate(90,80,80)"
-            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">63.6%</text>
+            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">64.5%</text>
           <text x="80" y="94" text-anchor="middle" transform="rotate(90,80,80)"
             style="font-size:10px;fill:#64748b;font-family:system-ui">通过率</text>
         </svg>
         <div class="legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">21 (60.0%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">4 (11.4%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">20 (57.1%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">3 (8.6%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (22.9%)</div></div>
           <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">8</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">2</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">4</div></div>
         </div>
       </div>
     </div>
@@ -337,13 +337,13 @@
         <div class="priority-bars">
           <!-- P1 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">13 通过 / 2 失败 / 17 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p1" style="width:76.5%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">3 通过 / 0 失败 / 3 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p1" style="width:100.0%"></div></div>
           </div>
           <!-- P2 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">8 通过 / 2 失败 / 18 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p2" style="width:44.4%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">17 通过 / 3 失败 / 32 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p2" style="width:53.1%"></div></div>
           </div>
           <!-- P3 -->
           <div class="pbar-row">
@@ -366,7 +366,7 @@
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
           <div class="mod-item"><div class="mod-name">开启佩戴检测</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">关闭佩戴检测</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 6</span></div></div>
+<div class="mod-item"><div class="mod-name">关闭佩戴检测</div><div class="mod-pills"><span class="pill pill-p">通过 7</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 6</span></div></div>
         </div>
       </div>
     </div>
@@ -379,15 +379,15 @@
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#15803d">✅ 质量亮点</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li>已执行用例中通过率 63.6%，阻塞用例 8 条待后续补充验证</li>
+          <li>P1 核心流程全部通过（3/3），冒烟质量达标</li>
+<li>已执行用例中通过率 64.5%，阻塞用例 8 条待后续补充验证</li>
           <!-- 每条：<li>亮点描述</li> -->
         </ul>
       </div>
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#b91c1c">⚠️ 风险 & 改进建议</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li><strong>P1 缺陷遗留：</strong>存在 2 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 2 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+          <li><strong>P2 缺陷遗留：</strong>存在 3 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
 <li><strong>阻塞用例较多：</strong>8 条用例（占比 22.9%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
           <!-- 每条：<li><strong>BUG/风险名：</strong>描述</li> -->
         </ul>
@@ -397,7 +397,7 @@
     <div style="margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-radius:8px;border-left:4px solid #2563eb">
       <div style="font-size:13px;color:#1e40af;font-weight:600;margin-bottom:4px">🎯 上线准入评估</div>
       <div style="font-size:13px;color:#374151;line-height:1.7">
-        <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 76.5%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 44.4%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 1 个（基于缺陷状态）（基线 ≤0）
+        <strong style="color:#92400e">🚫 测试不通过</strong><br>✅ P1 通过率 100.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 53.1%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
       </div>
     </div>
   </div>
@@ -407,7 +407,7 @@
 <div class="tab-panel" id="panel-1">
   <div class="section-header">
     <h2>📋 用例执行明细</h2>
-    <div class="section-badge">已执行 33 个</div>
+    <div class="section-badge">已执行 31 个</div>
     <div class="section-line"></div>
   </div>
   <div class="card" style="padding:0">
@@ -426,7 +426,7 @@
         </thead>
         <tbody>
           <tr class="group-row"><td colspan="6">开启佩戴检测</td></tr>
-<tr><td><span class="tc-id fail-id">pdjczt_0579</span></td><td class="tc-name">首次使用默认开启佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机连接眼镜2. 查看佩戴检测设置</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363727</span></td></tr>
+<tr><td><span class="tc-id fail-id">pdjczt_0579</span></td><td class="tc-name">首次使用默认开启佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机连接眼镜2. 查看佩戴检测设置</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363727</span>, <span style="color:#dc2626;font-weight:600">BUG#20384064</span></td></tr>
 <tr><td><span class="tc-id">pdjczt_0580</span></td><td class="tc-name">关闭佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 关闭佩戴检测</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">pdjczt_0581</span></td><td class="tc-name">恢复出厂设置开启佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 恢复眼镜出厂设置2. 查看佩戴检测设置</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363779</span></td></tr>
 <tr><td><span class="tc-id">wpdyjs_0591</span></td><td class="tc-name">开启同声传译</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启同声传译</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -436,26 +436,26 @@
 <tr><td><span class="tc-id blocked-id">pdjczt_0595</span></td><td class="tc-name">开启音乐-视频</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机播放音乐/视频软件</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0596</span></td><td class="tc-name">唤醒语音助手</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 呼喊&quot;小飞，小飞&quot;</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">yjsyzz_0582</span></td><td class="tc-name">显示状态下摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0583</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0584</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0585</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0586</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0587</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0588</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0583</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0584</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0585</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0586</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0587</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0588</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0589</span></td><td class="tc-name">音乐-视频播放中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0590</span></td><td class="tc-name">语音助手对话中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">关闭佩戴检测</td></tr>
-<tr><td><span class="tc-id">pdjczt_0597</span></td><td class="tc-name">开启佩戴检测</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 开启佩戴检测</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0597</span></td><td class="tc-name">开启佩戴检测</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 开启佩戴检测</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">yjsyzz_0598</span></td><td class="tc-name">显示状态下摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0599</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0600</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">pdjczt_0601</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0602</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0603</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0604</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0599</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0600</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id fail-id">pdjczt_0601</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0602</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0603</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0604</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0605</span></td><td class="tc-name">音乐-视频播放中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0606</span></td><td class="tc-name">语音助手对话中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">yjsyzz_0931</span></td><td class="tc-name">检查佩戴检测关闭下，自动息屏逻辑是否生效</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">摘下眼镜等待自动息屏的时间（默认10s，可自定义）</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20351862</span></td></tr>
+<tr><td><span class="tc-id">yjsyzz_0931</span></td><td class="tc-name">检查佩戴检测关闭下，自动息屏逻辑是否生效</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">摘下眼镜等待自动息屏的时间（默认10s，可自定义）</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20351862</span></td></tr>
 <tr><td><span class="tc-id blocked-id">wpdyjs_0607</span></td><td class="tc-name">开启同声传译</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启同声传译</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0608</span></td><td class="tc-name">开启面对面翻译</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启面对面翻译</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0609</span></td><td class="tc-name">开启通话翻译</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启通话翻译</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
@@ -499,14 +499,13 @@
 <div class="tab-panel" id="panel-2">
   <div class="section-header">
     <h2>🐛 缺陷汇总</h2>
-    <div class="section-badge">共 4 个</div>
+    <div class="section-badge">共 3 个</div>
     <div class="section-line"></div>
   </div>
   <div class="bugs-list">
-    <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382822?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20382822</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】不佩戴眼镜，打开面对面翻译容易出现蓝牙断连</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P0 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">面对面翻译中摘下眼镜</div><div class="bug-meta"><span class="bug-tag">模块：关闭佩戴检测</span><span class="bug-tag">关联：pdjczt_0601</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20351862?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20351862</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】不支持自动息屏和休眠</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">检查佩戴检测关闭下，自动息屏逻辑是否生效</div><div class="bug-meta"><span class="bug-tag">模块：关闭佩戴检测</span><span class="bug-tag">关联：yjsyzz_0931</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363727?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363727</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【APP】首次连接app，佩戴检测开关关闭，和眼镜端不同步</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">首次使用默认开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0579</span></div></div></div>
+    <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363727?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363727</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【APP】首次连接app，佩戴检测开关关闭，和眼镜端不同步</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div> <div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20384064?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20384064</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】SDK把佩戴检测默认关掉了</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">首次使用默认开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0579</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363779?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363779</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜恢复出厂设置后，佩戴检测关闭</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">恢复出厂设置开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0581</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382822?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382822</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】不佩戴眼镜，打开面对面翻译容易出现蓝牙断连</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P0 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">面对面翻译中摘下眼镜</div><div class="bug-meta"><span class="bug-tag">模块：关闭佩戴检测</span><span class="bug-tag">关联：pdjczt_0601</span></div></div></div>
     <!--
       每个缺陷一块：
       <div class="bug-card">
@@ -558,15 +557,15 @@
       <div class="env-item"><div class="env-label">执行方式</div><div class="env-val">手动测试</div></div>
       <div class="env-item"><div class="env-label">浏览器</div><div class="env-val">N/A（端侧设备）</div></div>
       <div class="env-item"><div class="env-label">测试类型</div><div class="env-val">功能测试（手动）</div></div>
-      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">佩戴检测-1776302447304.csv</div></div>
+      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">佩戴检测-1776407674188.csv</div></div>
       <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.78</div></div>
     </div>
     <div style="margin-top:24px">
       <div class="card-title" style="margin-bottom:16px">⏱️ 测试执行时间线</div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>佩戴检测测试</strong><span>执行 35 条用例：通过 21、失败 4、阻塞 8</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>佩戴检测测试</strong><span>执行 35 条用例：通过 20、失败 3、阻塞 8</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：🚫 测试不通过</span></div></div>
         <!--
           每个节点：
           <div class="tl-item">
@@ -620,31 +619,31 @@
 ║  端侧(RTOS) + APP(Android)          测试环境 URL                                            ║
 ║  手动测试      执行方式，如：Playwright MCP 辅助手动测试                 ║
 ║  N/A（端侧设备）          浏览器，如：Chromium（Headed 模式）                      ║
-║  佩戴检测-1776302447304.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
+║  佩戴检测-1776407674188.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
 ║  0.0.0.78     测试版本，如：v1.1（需求文档版本）                        ║
 ║                                                                              ║
 ║  【统计数字】（来自阶段三执行汇总）                                              ║
 ║  35       用例总数                                                ║
-║  33    已执行数（pass+fail+partial）                           ║
-║  21        通过数                                                  ║
-║  4        失败数                                                  ║
+║  31    已执行数（pass+fail+partial）                           ║
+║  20        通过数                                                  ║
+║  3        失败数                                                  ║
 ║  0     部分通过数                                               ║
 ║  8        跳过数                                                  ║
-║  2     未执行数                                                ║
-║  63.6   执行通过率（保留1位小数，如：88.9）                       ║
-║  失败 4 个（P1:2 P2:2 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
+║  4     未执行数                                                ║
+║  64.5   执行通过率（保留1位小数，如：88.9）                       ║
+║  失败 3 个（P1:0 P2:3 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 8 条 跳过原因简述                                            ║
 ║                                                                              ║
 ║  【SVG 甜甜圈计算】（C = 2×π×65 ≈ 408.4）                                    ║
-║  245.0    pass/executed × 408.4（保留1位小数）                   ║
-║  163.4    408.4 - PASS_LEN                                      ║
-║  46.7    fail/executed × 408.4                                 ║
-║  361.7    408.4 - FAIL_LEN                                      ║
+║  233.4    pass/executed × 408.4（保留1位小数）                   ║
+║  175.0    408.4 - PASS_LEN                                      ║
+║  35.0    fail/executed × 408.4                                 ║
+║  373.4    408.4 - FAIL_LEN                                      ║
 ║  93.3    partial/executed × 408.4                              ║
 ║  315.1    408.4 - PART_LEN                                      ║
-║  291.7 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
-║  60.0    pass/executed 的百分比（保留1位小数）                   ║
-║  11.4    fail/executed 的百分比                                 ║
+║  268.4 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
+║  57.1    pass/executed 的百分比（保留1位小数）                   ║
+║  8.6    fail/executed 的百分比                                 ║
 ║  22.9    partial/executed 的百分比                              ║
 ║                                                                              ║
 ║  【优先级分布】                                                                ║
@@ -653,9 +652,9 @@
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
 ║  <div class="mod-item"><div class="mod-name">开启佩戴检测</div><div class="mod-pills"><span class="pill pill-p">通过 13</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 2</span></div></div>
-<div class="mod-item"><div class="mod-name">关闭佩戴检测</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 2</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 6</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+<div class="mod-item"><div class="mod-name">关闭佩戴检测</div><div class="mod-pills"><span class="pill pill-p">通过 7</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 6</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">开启佩戴检测</td></tr>
-<tr><td><span class="tc-id fail-id">pdjczt_0579</span></td><td class="tc-name">首次使用默认开启佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机连接眼镜2. 查看佩戴检测设置</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363727</span></td></tr>
+<tr><td><span class="tc-id fail-id">pdjczt_0579</span></td><td class="tc-name">首次使用默认开启佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机连接眼镜2. 查看佩戴检测设置</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363727</span>, <span style="color:#dc2626;font-weight:600">BUG#20384064</span></td></tr>
 <tr><td><span class="tc-id">pdjczt_0580</span></td><td class="tc-name">关闭佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 关闭佩戴检测</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">pdjczt_0581</span></td><td class="tc-name">恢复出厂设置开启佩戴检测</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 恢复眼镜出厂设置2. 查看佩戴检测设置</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363779</span></td></tr>
 <tr><td><span class="tc-id">wpdyjs_0591</span></td><td class="tc-name">开启同声传译</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启同声传译</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -665,26 +664,26 @@
 <tr><td><span class="tc-id blocked-id">pdjczt_0595</span></td><td class="tc-name">开启音乐-视频</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机播放音乐/视频软件</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0596</span></td><td class="tc-name">唤醒语音助手</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 呼喊&quot;小飞，小飞&quot;</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">yjsyzz_0582</span></td><td class="tc-name">显示状态下摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0583</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0584</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0585</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0586</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0587</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0588</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0583</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0584</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0585</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0586</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0587</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363809</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0588</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0589</span></td><td class="tc-name">音乐-视频播放中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0590</span></td><td class="tc-name">语音助手对话中摘下眼镜</td><td class="tc-module">开启佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">关闭佩戴检测</td></tr>
-<tr><td><span class="tc-id">pdjczt_0597</span></td><td class="tc-name">开启佩戴检测</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 开启佩戴检测</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0597</span></td><td class="tc-name">开启佩戴检测</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 开启佩戴检测</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">yjsyzz_0598</span></td><td class="tc-name">显示状态下摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜2. 点亮屏幕</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0599</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0600</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">pdjczt_0601</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
-<tr><td><span class="tc-id">pdjczt_0602</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0603</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">pdjczt_0604</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0599</span></td><td class="tc-name">同声传译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0600</span></td><td class="tc-name">通话翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id fail-id">pdjczt_0601</span></td><td class="tc-name">面对面翻译中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382822</span></td></tr>
+<tr><td><span class="tc-id">pdjczt_0602</span></td><td class="tc-name">线上同传中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0603</span></td><td class="tc-name">录像中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pdjczt_0604</span></td><td class="tc-name">录音中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0605</span></td><td class="tc-name">音乐-视频播放中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pdjczt_0606</span></td><td class="tc-name">语音助手对话中摘下眼镜</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 取下眼镜</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">yjsyzz_0931</span></td><td class="tc-name">检查佩戴检测关闭下，自动息屏逻辑是否生效</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p1">P1</span></td><td class="step-text">摘下眼镜等待自动息屏的时间（默认10s，可自定义）</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20351862</span></td></tr>
+<tr><td><span class="tc-id">yjsyzz_0931</span></td><td class="tc-name">检查佩戴检测关闭下，自动息屏逻辑是否生效</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">摘下眼镜等待自动息屏的时间（默认10s，可自定义）</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20351862</span></td></tr>
 <tr><td><span class="tc-id blocked-id">wpdyjs_0607</span></td><td class="tc-name">开启同声传译</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启同声传译</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0608</span></td><td class="tc-name">开启面对面翻译</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启面对面翻译</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0609</span></td><td class="tc-name">开启通话翻译</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. app端开启通话翻译</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
@@ -692,17 +691,16 @@
 <tr><td><span class="tc-id blocked-id">pdjczt_0611</span></td><td class="tc-name">开启音乐-视频</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 手机播放音乐/视频软件</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pdjczt_0612</span></td><td class="tc-name">唤醒语音助手</td><td class="tc-module">关闭佩戴检测</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 呼喊&quot;小飞，小飞&quot;</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>     用例明细表格行（含 group-row 分组行）                   ║
 ║  共 8 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
-║  <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382822?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20382822</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】不佩戴眼镜，打开面对面翻译容易出现蓝牙断连</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P0 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">面对面翻译中摘下眼镜</div><div class="bug-meta"><span class="bug-tag">模块：关闭佩戴检测</span><span class="bug-tag">关联：pdjczt_0601</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20351862?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20351862</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】不支持自动息屏和休眠</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">检查佩戴检测关闭下，自动息屏逻辑是否生效</div><div class="bug-meta"><span class="bug-tag">模块：关闭佩戴检测</span><span class="bug-tag">关联：yjsyzz_0931</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363727?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363727</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【APP】首次连接app，佩戴检测开关关闭，和眼镜端不同步</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">首次使用默认开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0579</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363779?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363779</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜恢复出厂设置后，佩戴检测关闭</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">恢复出厂设置开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0581</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
-║  <li>已执行用例中通过率 63.6%，阻塞用例 8 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
-║  <li><strong>P1 缺陷遗留：</strong>存在 2 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 2 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+║  <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363727?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363727</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【APP】首次连接app，佩戴检测开关关闭，和眼镜端不同步</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div> <div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20384064?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20384064</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】SDK把佩戴检测默认关掉了</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P3 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">首次使用默认开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0579</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363779?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20363779</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜恢复出厂设置后，佩戴检测关闭</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">恢复出厂设置开启佩戴检测</div><div class="bug-meta"><span class="bug-tag">模块：开启佩戴检测</span><span class="bug-tag">关联：pdjczt_0581</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382822?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382822</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】不佩戴眼镜，打开面对面翻译容易出现蓝牙断连</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P0 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">面对面翻译中摘下眼镜</div><div class="bug-meta"><span class="bug-tag">模块：关闭佩戴检测</span><span class="bug-tag">关联：pdjczt_0601</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
+║  <li>P1 核心流程全部通过（3/3），冒烟质量达标</li>
+<li>已执行用例中通过率 64.5%，阻塞用例 8 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
+║  <li><strong>P2 缺陷遗留：</strong>存在 3 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
 <li><strong>阻塞用例较多：</strong>8 条用例（占比 22.9%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
-║  <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 76.5%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 44.4%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 1 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
+║  <strong style="color:#92400e">🚫 测试不通过</strong><br>✅ P1 通过率 100.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 53.1%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
 ║  <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>佩戴检测测试</strong><span>执行 35 条用例：通过 21、失败 4、阻塞 8</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>佩戴检测测试</strong><span>执行 35 条用例：通过 20、失败 3、阻塞 8</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：🚫 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->

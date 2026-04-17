@@ -261,26 +261,26 @@
   <div class="stats-grid">
     <div class="stat-card total">
       <div class="stat-label">用例总数</div>
-      <div class="stat-num">40</div>
-      <div class="stat-sub">本次执行 36 个 · 跳过 4 个 · 未执行 4 个</div>
+      <div class="stat-num">38</div>
+      <div class="stat-sub">本次执行 37 个 · 跳过 5 个 · 未执行 1 个</div>
       <div class="stat-icon">📋</div>
     </div>
     <div class="stat-card pass">
       <div class="stat-label">通过</div>
       <div class="stat-num">31</div>
-      <div class="stat-sub">执行通过率 <strong style="color:#15803d">86.1%</strong>（31/36）</div>
+      <div class="stat-sub">执行通过率 <strong style="color:#15803d">83.8%</strong>（31/37）</div>
       <div class="stat-icon">✅</div>
     </div>
     <div class="stat-card fail">
       <div class="stat-label">失败 / 缺陷</div>
       <div class="stat-num">1</div>
-      <div class="stat-sub">失败 1 个（P1:1 P2:0 P3:0）</div>
+      <div class="stat-sub">失败 1 个（P1:0 P2:1 P3:0）</div>
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
       <div class="stat-label">跳过 / 阻塞</div>
-      <div class="stat-num">4</div>
-      <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 4 条</div>
+      <div class="stat-num">5</div>
+      <div class="stat-sub">因功能未就绪/前置条件不满足被阻塞 5 条</div>
       <div class="stat-icon">⏭️</div>
     </div>
   </div>
@@ -302,27 +302,27 @@
         -->
         <svg class="donut-svg" viewBox="0 0 160 160">
           <circle class="donut-track" cx="80" cy="80" r="65"/>
-          <!-- PASS → 316.5 91.9 offset 0 -->
+          <!-- PASS → 333.2 75.2 offset 0 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#16a34a"
-            stroke-dasharray="316.5 91.9" stroke-dashoffset="0"/>
-          <!-- FAIL → 10.2 398.2 offset -316.5 -->
+            stroke-dasharray="333.2 75.2" stroke-dashoffset="0"/>
+          <!-- FAIL → 10.7 397.7 offset -333.2 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#dc2626"
-            stroke-dasharray="10.2 398.2" stroke-dashoffset="-316.5"/>
-          <!-- PARTIAL → 40.8 367.6 offset -326.7 -->
+            stroke-dasharray="10.7 397.7" stroke-dashoffset="-333.2"/>
+          <!-- PARTIAL → 53.7 354.7 offset -343.9 -->
           <circle class="donut-seg" cx="80" cy="80" r="65" stroke="#f59e0b"
-            stroke-dasharray="40.8 367.6" stroke-dashoffset="-326.7"/>
+            stroke-dasharray="53.7 354.7" stroke-dashoffset="-343.9"/>
           <!-- 中心文字（rotate 90 抵消父元素旋转） -->
           <text x="80" y="74" text-anchor="middle" transform="rotate(90,80,80)"
-            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">86.1%</text>
+            style="font-size:22px;font-weight:700;fill:#2563eb;font-family:system-ui">83.8%</text>
           <text x="80" y="94" text-anchor="middle" transform="rotate(90,80,80)"
             style="font-size:10px;fill:#64748b;font-family:system-ui">通过率</text>
         </svg>
         <div class="legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">31 (77.5%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">1 (2.5%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (10.0%)</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">4</div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">4</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div><div class="legend-name">通过</div><div class="legend-val" style="color:#16a34a">31 (81.6%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-name">失败</div><div class="legend-val" style="color:#dc2626">1 (2.6%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><div class="legend-name">部分通过</div><div class="legend-val" style="color:#d97706">0 (13.2%)</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div><div class="legend-name">跳过</div><div class="legend-val" style="color:#6b7280">5</div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d1d5db"></div><div class="legend-name">未执行</div><div class="legend-val" style="color:#9ca3af">1</div></div>
         </div>
       </div>
     </div>
@@ -337,17 +337,17 @@
         <div class="priority-bars">
           <!-- P1 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">10 通过 / 1 失败 / 14 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p1" style="width:71.4%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">5 通过 / 0 失败 / 5 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p1" style="width:100.0%"></div></div>
           </div>
           <!-- P2 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">16 通过 / 0 失败 / 21 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p2" style="width:76.2%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">19 通过 / 1 失败 / 26 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p2" style="width:73.1%"></div></div>
           </div>
           <!-- P3 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p3">P3</span> 一般功能</span><span style="font-size:12px;color:#6b7280">5 通过 / 0 失败 / 5 执行</span></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p3">P3</span> 一般功能</span><span style="font-size:12px;color:#6b7280">7 通过 / 0 失败 / 7 执行</span></div>
             <div class="pbar-track"><div class="pbar-fill p3" style="width:100.0%"></div></div>
           </div>
           <!-- P4 -->
@@ -365,8 +365,8 @@
         </div>
         <div class="module-stat">
           <!-- 每行格式：<div class="mod-item"><div class="mod-name">图标 模块名</div><div class="mod-pills"><span class="pill pill-p">通过 N</span><span class="pill pill-f">失败 N</span><span class="pill pill-s">跳过 N</span></div></div> -->
-          <div class="mod-item"><div class="mod-name">线上同传基础功能_设置</div><div class="mod-pills"><span class="pill pill-p">通过 23</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">线上同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 4</span></div></div>
+          <div class="mod-item"><div class="mod-name">线上同传基础功能_设置</div><div class="mod-pills"><span class="pill pill-p">通过 22</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
+<div class="mod-item"><div class="mod-name">线上同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 9</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span></div></div>
         </div>
       </div>
     </div>
@@ -379,15 +379,16 @@
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#15803d">✅ 质量亮点</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li>已执行用例中通过率 86.1%，阻塞用例 4 条待后续补充验证</li>
+          <li>P1 核心流程全部通过（5/5），冒烟质量达标</li>
+<li>已执行用例中通过率 83.8%，阻塞用例 5 条待后续补充验证</li>
           <!-- 每条：<li>亮点描述</li> -->
         </ul>
       </div>
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#b91c1c">⚠️ 风险 & 改进建议</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>阻塞用例较多：</strong>4 条用例（占比 10.0%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
+          <li><strong>P2 缺陷遗留：</strong>存在 1 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+<li><strong>阻塞用例较多：</strong>5 条用例（占比 13.2%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
           <!-- 每条：<li><strong>BUG/风险名：</strong>描述</li> -->
         </ul>
       </div>
@@ -396,7 +397,7 @@
     <div style="margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-radius:8px;border-left:4px solid #2563eb">
       <div style="font-size:13px;color:#1e40af;font-weight:600;margin-bottom:4px">🎯 上线准入评估</div>
       <div style="font-size:13px;color:#374151;line-height:1.7">
-        <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 71.4%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 76.2%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 100.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 1 个（基于缺陷状态）（基线 ≤0）
+        <strong style="color:#92400e">🚫 测试不通过</strong><br>✅ P1 通过率 100.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 73.1%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 100.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于失败用例数）（基线 ≤0）<br>❌ 遗留 P2 缺陷 1 个（基于失败用例数）（基线 ≤0）
       </div>
     </div>
   </div>
@@ -406,7 +407,7 @@
 <div class="tab-panel" id="panel-1">
   <div class="section-header">
     <h2>📋 用例执行明细</h2>
-    <div class="section-badge">已执行 36 个</div>
+    <div class="section-badge">已执行 37 个</div>
     <div class="section-line"></div>
   </div>
   <div class="card" style="padding:0">
@@ -430,34 +431,32 @@
 <tr><td><span class="tc-id">xstcjc_0374</span></td><td class="tc-name">线上同传基础功能-退出取消</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用APP打开线上同传的功能2.点击退出后确认3.点击退出后取消</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0375</span></td><td class="tc-name">线上同传基础功能-眼镜用户发言</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.打开眼镜的同传翻译功能2.用户开麦发言</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0376</span></td><td class="tc-name">线上同传基础功能-会议前使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.先打开眼镜的同传翻译功能2.播放一些音视频软件的软件3.再链接进入会议</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcjc_0377</span></td><td class="tc-name">线上同传基础功能-会议中加入使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.先加入会议2.再打开眼镜的同传翻译功能</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcjc_0377</span></td><td class="tc-name">线上同传基础功能-会议中加入使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.先加入会议2.再打开眼镜的同传翻译功能</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0378</span></td><td class="tc-name">线上同传基础功能-会议结束</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.会议中使用眼镜的线上同传翻译功能2.会议结束（如主持人解散会议）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0379</span></td><td class="tc-name">线上同传使用中眼镜显示内容检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜的线上同传翻译功能进入会议2.检查眼镜端所展示的内容</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363670</span>, <span style="color:#dc2626;font-weight:600">BUG#20363681</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0380</span></td><td class="tc-name">线上同传使用中眼镜字幕展示-仅原文</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">使用过程中在眼镜端侧，点击显示仅原文</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0381</span></td><td class="tc-name">线上同传使用中眼镜字幕展示-仅译文</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">使用过程中在眼镜端侧，点击显示仅译文</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0382</span></td><td class="tc-name">线上同传播音逻辑验证</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传2.系统音量调节到0%3.佩戴眼镜听原文和译文的声音大小</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0383</span></td><td class="tc-name">线上同传播音逻辑验证</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜线上同传翻译2.系统音量调节到100%3.佩戴眼镜听原文和译文的声音大小</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcjc_0384</span></td><td class="tc-name">线上同传暂停-结束</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜线上同传2.在使用过程中通过眼镜端选中暂停后双击3.在使用过程中通过APP端选择暂停4.暂停后通过眼镜端选中继续后双击5.暂停后通过APP端点击继续</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363646</span></td></tr>
+<tr><td><span class="tc-id">xstcjc_0384</span></td><td class="tc-name">线上同传暂停-结束</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传2.在使用过程中通过眼镜端选中暂停后双击3.在使用过程中通过APP端选择暂停4.暂停后通过眼镜端选中继续后双击5.暂停后通过APP端点击继续</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0385</span></td><td class="tc-name">线上同传原文播报和译文播报开关默认检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">检查原文播报和译文播报开关的默认状态</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcjc_0386</span></td><td class="tc-name">线上同传原文播报关闭</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通过APP关闭线上同传的原文播报开关</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0387</span></td><td class="tc-name">线上同传译文播报关闭</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通过APP关闭线上同传的译文播报开关</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0388</span></td><td class="tc-name">线上同传翻译-息屏翻译</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中手机息屏</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0389</span></td><td class="tc-name">线上同传眼镜端分段逻辑检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.打开使用眼镜的线上同传2.会议中对方持续有说话3.查看眼镜端的文本分段逻辑</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0390</span></td><td class="tc-name">线上同传使用中沉浸式校验</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜进行在线同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363707</span></td></tr>
-<tr><td><span class="tc-id">xstcjc_0391</span></td><td class="tc-name">线上同传翻译-使用中高亮内容检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0392</span></td><td class="tc-name">线上同传使用中切换字体大小-持续使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363712</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0393</span></td><td class="tc-name">线上同传使用中切换字体大小-暂停</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0394</span></td><td class="tc-name">线上同传使用中暂停的时长校验</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行在线同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0395</span></td><td class="tc-name">线上同传翻译-使用中切换语种</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用中通过APP切换语种为中-外（中英）2.使用中通过APP切换语种为外-外（英-阿拉伯）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363739</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0396</span></td><td class="tc-name">线上同传翻译-使用前切换语种</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用前通过APP切换语种为中-外（中英）2.使用前通过APP切换语种为外-外（英-阿拉伯）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">线上同传异常逻辑处理</td></tr>
-<tr><td><span class="tc-id fail-id">xstcyc_0397</span></td><td class="tc-name">线上同传翻译过程中其他应用打断</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中切换APP播放其他媒体音频</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363751</span>, <span style="color:#dc2626;font-weight:600">BUG#20383092</span></td></tr>
+<tr><td><span class="tc-id fail-id">xstcyc_0397</span></td><td class="tc-name">线上同传翻译过程中其他应用打断</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中切换APP播放其他媒体音频</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
 <tr><td><span class="tc-id">xstcyc_0398</span></td><td class="tc-name">线上同传翻译过程中杀后台</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中杀掉翻译APP的后台</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0399</span></td><td class="tc-name">线上同传翻译过程中无声音</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.五分钟没有任何音频输入</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0400</span></td><td class="tc-name">线上同传翻译过程中蓝牙断开连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.蓝牙断开连接</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">xstcyc_0401</span></td><td class="tc-name">线上同传翻译-使用时拍照-录像</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中进行拍照/录像</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0402</span></td><td class="tc-name">线上同传翻译-眼镜未连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.眼镜未连接手机APP2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0403</span></td><td class="tc-name">线上同传翻译-账号未登录</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.眼镜已经连接手机APP但是没有登录账号2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0399</span></td><td class="tc-name">线上同传翻译过程中无声音</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.五分钟没有任何音频输入</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0400</span></td><td class="tc-name">线上同传翻译过程中蓝牙断开连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.正常使用线上同传翻译2.蓝牙断开连接</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0401</span></td><td class="tc-name">线上同传翻译-使用时拍照-录像</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中进行拍照/录像</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xstcyc_0402</span></td><td class="tc-name">线上同传翻译-眼镜未连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜未连接手机APP2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xstcyc_0403</span></td><td class="tc-name">线上同传翻译-账号未登录</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜已经连接手机APP但是没有登录账号2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcyc_0404</span></td><td class="tc-name">线上同传使用过程中低电量提醒</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.持续使用至眼镜低电量（10%）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363755</span></td></tr>
 <tr><td><span class="tc-id">xstcyc_0405</span></td><td class="tc-name">线上同传使用过程中低电量关机</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜处于低电量下持续使用至断电关机</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcyc_0406</span></td><td class="tc-name">线上同传基础功能-使用中有SIM卡通话插入</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.会议中使用眼镜的同传翻译功能2.接到SIM卡通话</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -465,7 +464,7 @@
 <tr><td><span class="tc-id blocked-id">xstcyc_0408</span></td><td class="tc-name">线上同传手机存储空间限制</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传翻译2.使用工具把手机内存填满</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">xstcyc_0409</span></td><td class="tc-name">线上同传手机存储空间限制</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传翻译2.存储空间不足点击确认结束</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">xstcyc_0410</span></td><td class="tc-name">线上同传手机存储空间限制</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传翻译2.存储空间不足点击取消</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0411</span></td><td class="tc-name">线上同传翻译过程中断网</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.在网络正常的情况下使用线上同传翻译2.使用过程中中断网络</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0411</span></td><td class="tc-name">线上同传翻译过程中断网</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.在网络正常的情况下使用线上同传翻译2.使用过程中中断网络</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
           <!--
             普通用例行：
             <tr>
@@ -495,7 +494,7 @@
     </div>
   </div>
   <div class="not-exe-note">
-    <strong>📌 未执行用例说明：</strong> 共 4 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。
+    <strong>📌 未执行用例说明：</strong> 共 5 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。
   </div>
 </div>
 
@@ -507,7 +506,7 @@
     <div class="section-line"></div>
   </div>
   <div class="bugs-list">
-    <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363751?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20363751</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】线上同传时异常打断未暂停</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div> <div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20383092?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20383092</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】音视频会被识别不会打断翻译</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">线上同传翻译过程中其他应用打断</div><div class="bug-meta"><span class="bug-tag">模块：线上同传异常逻辑处理</span><span class="bug-tag">关联：xstcyc_0397</span></div></div></div>
+    <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-1</span></div><div class="bug-title">线上同传翻译过程中其他应用打断</div><div class="bug-meta"><span class="bug-tag">模块：线上同传异常逻辑处理</span><span class="bug-tag">关联：xstcyc_0397</span></div></div></div>
     <!--
       每个缺陷一块：
       <div class="bug-card">
@@ -559,15 +558,15 @@
       <div class="env-item"><div class="env-label">执行方式</div><div class="env-val">手动测试</div></div>
       <div class="env-item"><div class="env-label">浏览器</div><div class="env-val">N/A（端侧设备）</div></div>
       <div class="env-item"><div class="env-label">测试类型</div><div class="env-val">功能测试（手动）</div></div>
-      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">线上同传0401-1776340002140.csv</div></div>
+      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">线上同传0401-1776408119804.csv</div></div>
       <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.78</div></div>
     </div>
     <div style="margin-top:24px">
       <div class="card-title" style="margin-bottom:16px">⏱️ 测试执行时间线</div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>线上同传0401测试</strong><span>执行 40 条用例：通过 31、失败 1、阻塞 4</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>线上同传0401测试</strong><span>执行 38 条用例：通过 31、失败 1、阻塞 5</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：🚫 测试不通过</span></div></div>
         <!--
           每个节点：
           <div class="tl-item">
@@ -621,74 +620,72 @@
 ║  端侧(RTOS) + APP(Android)          测试环境 URL                                            ║
 ║  手动测试      执行方式，如：Playwright MCP 辅助手动测试                 ║
 ║  N/A（端侧设备）          浏览器，如：Chromium（Headed 模式）                      ║
-║  线上同传0401-1776340002140.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
+║  线上同传0401-1776408119804.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
 ║  0.0.0.78     测试版本，如：v1.1（需求文档版本）                        ║
 ║                                                                              ║
 ║  【统计数字】（来自阶段三执行汇总）                                              ║
-║  40       用例总数                                                ║
-║  36    已执行数（pass+fail+partial）                           ║
+║  38       用例总数                                                ║
+║  37    已执行数（pass+fail+partial）                           ║
 ║  31        通过数                                                  ║
 ║  1        失败数                                                  ║
 ║  0     部分通过数                                               ║
-║  4        跳过数                                                  ║
-║  4     未执行数                                                ║
-║  86.1   执行通过率（保留1位小数，如：88.9）                       ║
-║  失败 1 个（P1:1 P2:0 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
-║  因功能未就绪/前置条件不满足被阻塞 4 条 跳过原因简述                                            ║
+║  5        跳过数                                                  ║
+║  1     未执行数                                                ║
+║  83.8   执行通过率（保留1位小数，如：88.9）                       ║
+║  失败 1 个（P1:0 P2:1 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
+║  因功能未就绪/前置条件不满足被阻塞 5 条 跳过原因简述                                            ║
 ║                                                                              ║
 ║  【SVG 甜甜圈计算】（C = 2×π×65 ≈ 408.4）                                    ║
-║  316.5    pass/executed × 408.4（保留1位小数）                   ║
-║  91.9    408.4 - PASS_LEN                                      ║
-║  10.2    fail/executed × 408.4                                 ║
-║  398.2    408.4 - FAIL_LEN                                      ║
-║  40.8    partial/executed × 408.4                              ║
-║  367.6    408.4 - PART_LEN                                      ║
-║  326.7 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
-║  77.5    pass/executed 的百分比（保留1位小数）                   ║
-║  2.5    fail/executed 的百分比                                 ║
-║  10.0    partial/executed 的百分比                              ║
+║  333.2    pass/executed × 408.4（保留1位小数）                   ║
+║  75.2    408.4 - PASS_LEN                                      ║
+║  10.7    fail/executed × 408.4                                 ║
+║  397.7    408.4 - FAIL_LEN                                      ║
+║  53.7    partial/executed × 408.4                              ║
+║  354.7    408.4 - PART_LEN                                      ║
+║  343.9 PASS_LEN + FAIL_LEN（用于 partial 偏移）             ║
+║  81.6    pass/executed 的百分比（保留1位小数）                   ║
+║  2.6    fail/executed 的百分比                                 ║
+║  13.2    partial/executed 的百分比                              ║
 ║                                                                              ║
 ║  【优先级分布】                                                                ║
 ║  {{P1/P2/P3/P4_PASS}} {{P1/P2/P3/P4_FAIL}} {{P1/P2/P3/P4_EXE}}             ║
 ║  {{P1/P2/P3/P4_RATE}} 通过率百分比（整数），用于进度条宽度                     ║
 ║                                                                              ║
 ║  【内容区块】（逐块生成 HTML 片段）                                             ║
-║  <div class="mod-item"><div class="mod-name">线上同传基础功能_设置</div><div class="mod-pills"><span class="pill pill-p">通过 23</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
-<div class="mod-item"><div class="mod-name">线上同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 8</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 4</span></div></div>       各模块统计行（.mod-item 列表）                          ║
+║  <div class="mod-item"><div class="mod-name">线上同传基础功能_设置</div><div class="mod-pills"><span class="pill pill-p">通过 22</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>
+<div class="mod-item"><div class="mod-name">线上同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 9</span><span class="pill pill-f">失败 1</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 5</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">线上同传基础功能_设置</td></tr>
 <tr><td><span class="tc-id">xstcjc_0372</span></td><td class="tc-name">线上同传基础功能-正常使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用APP打开线上同传的功能2.使用眼镜端打开线上同传的功能3.使用眼镜AI助手打开线上同传</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0373</span></td><td class="tc-name">线上同传基础功能-退出确认</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用APP打开线上同传的功能2.眼镜端点击退出3.APP端点击退出</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20356520</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0374</span></td><td class="tc-name">线上同传基础功能-退出取消</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用APP打开线上同传的功能2.点击退出后确认3.点击退出后取消</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0375</span></td><td class="tc-name">线上同传基础功能-眼镜用户发言</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.打开眼镜的同传翻译功能2.用户开麦发言</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0376</span></td><td class="tc-name">线上同传基础功能-会议前使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.先打开眼镜的同传翻译功能2.播放一些音视频软件的软件3.再链接进入会议</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcjc_0377</span></td><td class="tc-name">线上同传基础功能-会议中加入使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.先加入会议2.再打开眼镜的同传翻译功能</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcjc_0377</span></td><td class="tc-name">线上同传基础功能-会议中加入使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.先加入会议2.再打开眼镜的同传翻译功能</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0378</span></td><td class="tc-name">线上同传基础功能-会议结束</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.会议中使用眼镜的线上同传翻译功能2.会议结束（如主持人解散会议）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0379</span></td><td class="tc-name">线上同传使用中眼镜显示内容检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜的线上同传翻译功能进入会议2.检查眼镜端所展示的内容</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363670</span>, <span style="color:#dc2626;font-weight:600">BUG#20363681</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0380</span></td><td class="tc-name">线上同传使用中眼镜字幕展示-仅原文</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">使用过程中在眼镜端侧，点击显示仅原文</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0381</span></td><td class="tc-name">线上同传使用中眼镜字幕展示-仅译文</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">使用过程中在眼镜端侧，点击显示仅译文</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0382</span></td><td class="tc-name">线上同传播音逻辑验证</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传2.系统音量调节到0%3.佩戴眼镜听原文和译文的声音大小</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0383</span></td><td class="tc-name">线上同传播音逻辑验证</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜线上同传翻译2.系统音量调节到100%3.佩戴眼镜听原文和译文的声音大小</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcjc_0384</span></td><td class="tc-name">线上同传暂停-结束</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜线上同传2.在使用过程中通过眼镜端选中暂停后双击3.在使用过程中通过APP端选择暂停4.暂停后通过眼镜端选中继续后双击5.暂停后通过APP端点击继续</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363646</span></td></tr>
+<tr><td><span class="tc-id">xstcjc_0384</span></td><td class="tc-name">线上同传暂停-结束</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传2.在使用过程中通过眼镜端选中暂停后双击3.在使用过程中通过APP端选择暂停4.暂停后通过眼镜端选中继续后双击5.暂停后通过APP端点击继续</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0385</span></td><td class="tc-name">线上同传原文播报和译文播报开关默认检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">检查原文播报和译文播报开关的默认状态</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcjc_0386</span></td><td class="tc-name">线上同传原文播报关闭</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通过APP关闭线上同传的原文播报开关</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0387</span></td><td class="tc-name">线上同传译文播报关闭</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.通过APP关闭线上同传的译文播报开关</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0388</span></td><td class="tc-name">线上同传翻译-息屏翻译</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中手机息屏</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0389</span></td><td class="tc-name">线上同传眼镜端分段逻辑检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.打开使用眼镜的线上同传2.会议中对方持续有说话3.查看眼镜端的文本分段逻辑</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0390</span></td><td class="tc-name">线上同传使用中沉浸式校验</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜进行在线同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363707</span></td></tr>
-<tr><td><span class="tc-id">xstcjc_0391</span></td><td class="tc-name">线上同传翻译-使用中高亮内容检查</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0392</span></td><td class="tc-name">线上同传使用中切换字体大小-持续使用</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363712</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0393</span></td><td class="tc-name">线上同传使用中切换字体大小-暂停</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0394</span></td><td class="tc-name">线上同传使用中暂停的时长校验</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行在线同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcjc_0395</span></td><td class="tc-name">线上同传翻译-使用中切换语种</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用中通过APP切换语种为中-外（中英）2.使用中通过APP切换语种为外-外（英-阿拉伯）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363739</span></td></tr>
 <tr><td><span class="tc-id">xstcjc_0396</span></td><td class="tc-name">线上同传翻译-使用前切换语种</td><td class="tc-module">线上同传基础功能_设置</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用前通过APP切换语种为中-外（中英）2.使用前通过APP切换语种为外-外（英-阿拉伯）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">线上同传异常逻辑处理</td></tr>
-<tr><td><span class="tc-id fail-id">xstcyc_0397</span></td><td class="tc-name">线上同传翻译过程中其他应用打断</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中切换APP播放其他媒体音频</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20363751</span>, <span style="color:#dc2626;font-weight:600">BUG#20383092</span></td></tr>
+<tr><td><span class="tc-id fail-id">xstcyc_0397</span></td><td class="tc-name">线上同传翻译过程中其他应用打断</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中切换APP播放其他媒体音频</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
 <tr><td><span class="tc-id">xstcyc_0398</span></td><td class="tc-name">线上同传翻译过程中杀后台</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中杀掉翻译APP的后台</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0399</span></td><td class="tc-name">线上同传翻译过程中无声音</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.五分钟没有任何音频输入</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0400</span></td><td class="tc-name">线上同传翻译过程中蓝牙断开连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.蓝牙断开连接</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">xstcyc_0401</span></td><td class="tc-name">线上同传翻译-使用时拍照-录像</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中进行拍照/录像</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0402</span></td><td class="tc-name">线上同传翻译-眼镜未连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.眼镜未连接手机APP2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0403</span></td><td class="tc-name">线上同传翻译-账号未登录</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.眼镜已经连接手机APP但是没有登录账号2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0399</span></td><td class="tc-name">线上同传翻译过程中无声音</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.五分钟没有任何音频输入</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0400</span></td><td class="tc-name">线上同传翻译过程中蓝牙断开连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.正常使用线上同传翻译2.蓝牙断开连接</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">xstcyc_0401</span></td><td class="tc-name">线上同传翻译-使用时拍照-录像</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用线上同传翻译2.使用中进行拍照/录像</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xstcyc_0402</span></td><td class="tc-name">线上同传翻译-眼镜未连接</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜未连接手机APP2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">xstcyc_0403</span></td><td class="tc-name">线上同传翻译-账号未登录</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜已经连接手机APP但是没有登录账号2.直接通过触控板选择进入线上同传使用</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcyc_0404</span></td><td class="tc-name">线上同传使用过程中低电量提醒</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.持续使用至眼镜低电量（10%）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20363755</span></td></tr>
 <tr><td><span class="tc-id">xstcyc_0405</span></td><td class="tc-name">线上同传使用过程中低电量关机</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜处于低电量下持续使用至断电关机</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">xstcyc_0406</span></td><td class="tc-name">线上同传基础功能-使用中有SIM卡通话插入</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.会议中使用眼镜的同传翻译功能2.接到SIM卡通话</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -696,15 +693,16 @@
 <tr><td><span class="tc-id blocked-id">xstcyc_0408</span></td><td class="tc-name">线上同传手机存储空间限制</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传翻译2.使用工具把手机内存填满</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">xstcyc_0409</span></td><td class="tc-name">线上同传手机存储空间限制</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传翻译2.存储空间不足点击确认结束</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">xstcyc_0410</span></td><td class="tc-name">线上同传手机存储空间限制</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜线上同传翻译2.存储空间不足点击取消</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id">xstcyc_0411</span></td><td class="tc-name">线上同传翻译过程中断网</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.在网络正常的情况下使用线上同传翻译2.使用过程中中断网络</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>     用例明细表格行（含 group-row 分组行）                   ║
-║  共 4 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
-║  <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20363751?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20363751</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】线上同传时异常打断未暂停</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div> <div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20383092?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20383092</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】音视频会被识别不会打断翻译</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">线上同传翻译过程中其他应用打断</div><div class="bug-meta"><span class="bug-tag">模块：线上同传异常逻辑处理</span><span class="bug-tag">关联：xstcyc_0397</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
-║  <li>已执行用例中通过率 86.1%，阻塞用例 4 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
-║  <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>阻塞用例较多：</strong>4 条用例（占比 10.0%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
-║  <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 71.4%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 76.2%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 100.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 1 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
+<tr><td><span class="tc-id">xstcyc_0411</span></td><td class="tc-name">线上同传翻译过程中断网</td><td class="tc-module">线上同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.在网络正常的情况下使用线上同传翻译2.使用过程中中断网络</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>     用例明细表格行（含 group-row 分组行）                   ║
+║  共 5 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
+║  <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-1</span></div><div class="bug-title">线上同传翻译过程中其他应用打断</div><div class="bug-meta"><span class="bug-tag">模块：线上同传异常逻辑处理</span><span class="bug-tag">关联：xstcyc_0397</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
+║  <li>P1 核心流程全部通过（5/5），冒烟质量达标</li>
+<li>已执行用例中通过率 83.8%，阻塞用例 5 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
+║  <li><strong>P2 缺陷遗留：</strong>存在 1 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+<li><strong>阻塞用例较多：</strong>5 条用例（占比 13.2%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
+║  <strong style="color:#92400e">🚫 测试不通过</strong><br>✅ P1 通过率 100.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 73.1%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 100.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于失败用例数）（基线 ≤0）<br>❌ 遗留 P2 缺陷 1 个（基于失败用例数）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
 ║  <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>线上同传0401测试</strong><span>执行 40 条用例：通过 31、失败 1、阻塞 4</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>线上同传0401测试</strong><span>执行 38 条用例：通过 31、失败 1、阻塞 5</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：🚫 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->

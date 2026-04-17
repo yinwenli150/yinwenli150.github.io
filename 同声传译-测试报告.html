@@ -274,7 +274,7 @@
     <div class="stat-card fail">
       <div class="stat-label">失败 / 缺陷</div>
       <div class="stat-num">3</div>
-      <div class="stat-sub">失败 3 个（P1:1 P2:2 P3:0）</div>
+      <div class="stat-sub">失败 3 个（P1:0 P2:3 P3:0）</div>
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
@@ -337,18 +337,18 @@
         <div class="priority-bars">
           <!-- P1 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">10 通过 / 1 失败 / 11 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p1" style="width:90.9%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p1">P1</span> 核心流程</span><span style="font-size:12px;color:#6b7280">7 通过 / 0 失败 / 7 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p1" style="width:100.0%"></div></div>
           </div>
           <!-- P2 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">5 通过 / 2 失败 / 18 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p2" style="width:27.8%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">7 通过 / 3 失败 / 21 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p2" style="width:33.3%"></div></div>
           </div>
           <!-- P3 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p3">P3</span> 一般功能</span><span style="font-size:12px;color:#6b7280">1 通过 / 0 失败 / 3 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p3" style="width:33.3%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p3">P3</span> 一般功能</span><span style="font-size:12px;color:#6b7280">2 通过 / 0 失败 / 4 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p3" style="width:50.0%"></div></div>
           </div>
           <!-- P4 -->
           <div class="pbar-row">
@@ -381,15 +381,15 @@
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#15803d">✅ 质量亮点</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li>已执行用例中通过率 77.3%，阻塞用例 2 条待后续补充验证</li>
+          <li>P1 核心流程全部通过（7/7），冒烟质量达标</li>
+<li>已执行用例中通过率 77.3%，阻塞用例 2 条待后续补充验证</li>
           <!-- 每条：<li>亮点描述</li> -->
         </ul>
       </div>
       <div>
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#b91c1c">⚠️ 风险 & 改进建议</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
-          <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 2 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+          <li><strong>P2 缺陷遗留：</strong>存在 3 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
 <li><strong>阻塞用例较多：</strong>2 条用例（占比 6.1%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
           <!-- 每条：<li><strong>BUG/风险名：</strong>描述</li> -->
         </ul>
@@ -399,7 +399,7 @@
     <div style="margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-radius:8px;border-left:4px solid #2563eb">
       <div style="font-size:13px;color:#1e40af;font-weight:600;margin-bottom:4px">🎯 上线准入评估</div>
       <div style="font-size:13px;color:#374151;line-height:1.7">
-        <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 90.9%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 27.8%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 33.3%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 2 个（基于缺陷状态）（基线 ≤0）
+        <strong style="color:#92400e">🚫 测试不通过</strong><br>✅ P1 通过率 100.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 33.3%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 50.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 2 个（基于缺陷状态）（基线 ≤0）
       </div>
     </div>
   </div>
@@ -429,18 +429,18 @@
         <tbody>
           <tr class="group-row"><td colspan="6">旁听同传唤醒</td></tr>
 <tr><td><span class="tc-id blocked-id">pttchx_0038</span></td><td class="tc-name">旁听同传语言指令唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p2">P2</span></td><td class="step-text">功能开启方式1 - 眼镜端语音指令:说&quot;小飞小飞，开启旁听同传&quot;</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">pttchx_0039</span></td><td class="tc-name">旁听同传触控唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p1">P1</span></td><td class="step-text">功能开启方式2 - 眼镜端触控板:在launcher页面，焦点选中&quot;旁听同传&quot;双击触控板</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20346758</span></td></tr>
+<tr><td><span class="tc-id fail-id">pttchx_0039</span></td><td class="tc-name">旁听同传触控唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p2">P2</span></td><td class="step-text">功能开启方式2 - 眼镜端触控板:在launcher页面，焦点选中&quot;旁听同传&quot;双击触控板</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20346758</span></td></tr>
 <tr><td><span class="tc-id">pttchx_0040</span></td><td class="tc-name">旁听同传APP控制唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p1">P1</span></td><td class="step-text">功能开启方式3 - 手机App:   在App页面点击&quot;旁听同传&quot;   手动点击&quot;开始收声&quot;按钮   验证功能启动</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pttchx_0041</span></td><td class="tc-name">眼镜未正确连接使用旁听同传</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.眼镜未与APP连接通过眼镜选择旁听同传打开使用2.眼镜与APP连接但是未登录，通过眼镜选择旁听同传使用打开</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">旁听同传翻译设置_流程</td></tr>
-<tr><td><span class="tc-id">pttcfy_0042</span></td><td class="tc-name">眼镜使用中高亮检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcfy_0042</span></td><td class="tc-name">眼镜使用中高亮检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">pttcfy_0043</span></td><td class="tc-name">眼镜使用中分段逻辑检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0044</span></td><td class="tc-name">旁听同传手机息屏使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.APP进入使用同传翻译2.使用过程中手机息屏观察使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0045</span></td><td class="tc-name">旁听同传使用中眼镜显示内容检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">验证翻译显示:眼镜端显示对方声音的原文、译文支持</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0046</span></td><td class="tc-name">旁听同传使用中切换字体大小-持续使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0047</span></td><td class="tc-name">旁听同传使用中切换字体大小-暂停</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0048</span></td><td class="tc-name">旁听同传使用中暂停的时长校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355156</span></td></tr>
-<tr><td><span class="tc-id">pttcfy_0049</span></td><td class="tc-name">旁听同传使用中沉浸式校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20359794</span></td></tr>
+<tr><td><span class="tc-id">pttcfy_0049</span></td><td class="tc-name">旁听同传使用中沉浸式校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20359794</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0050</span></td><td class="tc-name">旁听同传译文播报功能</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">检查译文播报的默认配置</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0051</span></td><td class="tc-name">旁听同传译文播报功能</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用APP关闭眼镜的译文播报功能</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0052</span></td><td class="tc-name">旁听同传记录保存校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">使用旁听同传点击完成后校验记录中的内容</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -458,7 +458,7 @@
 <tr><td><span class="tc-id">pttcls_0063</span></td><td class="tc-name">旁听同传完成通过APP保存</td><td class="tc-module">旁听同传历史记录保存</td><td><span class="badge-p p2">P2</span></td><td class="step-text">App端完成方式2 - 完成按钮:点击右下角&quot;完成&quot;按钮</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcls_0064</span></td><td class="tc-name">旁听同传完成通过APP保存</td><td class="tc-module">旁听同传历史记录保存</td><td><span class="badge-p p2">P2</span></td><td class="step-text">App端完成方式3 - 查看历史记录:1.点击APP的查看历史记录后确认2.点击APP的查看历史记录后取消</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">旁听同传异常逻辑处理</td></tr>
-<tr><td><span class="tc-id">pttcyc_0065</span></td><td class="tc-name">旁听同传眼镜使用中蓝牙断开</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用过程中断开蓝牙连接（如被连接手机关闭蓝牙、连接超距）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcyc_0065</span></td><td class="tc-name">旁听同传眼镜使用中蓝牙断开</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用过程中断开蓝牙连接（如被连接手机关闭蓝牙、连接超距）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0066</span></td><td class="tc-name">旁听同传记录保存校验-应用冲突</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.开启旁听同传并进行翻译2.翻译APP切到后台并播放带有音频的软件如B站等</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0067</span></td><td class="tc-name">旁听同传记录无识别内容</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.正常使用APP同传2.保持周围安静没有声音，查看眼镜的收音时长</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0068</span></td><td class="tc-name">旁听同传时电话接入</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用APP同传2.使用过程中接入SIM卡电话/微信电话接听3.使用过程中接入SIM卡电话/微信电话拒绝</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
@@ -505,7 +505,7 @@
     <div class="section-line"></div>
   </div>
   <div class="bugs-list">
-    <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346758?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20346758</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】同声传译触控唤醒异常</div><div style="color:#6b7280;line-height:1.5;">状态：已拒绝 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">旁听同传触控唤醒</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传唤醒</span><span class="bug-tag">关联：pttchx_0039</span></div></div></div>
+    <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346758?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20346758</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】同声传译触控唤醒异常</div><div style="color:#6b7280;line-height:1.5;">状态：已拒绝 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">旁听同传触控唤醒</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传唤醒</span><span class="bug-tag">关联：pttchx_0039</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355144?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20355144</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜界面中文文案符号在句首</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用中分段逻辑检查</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传翻译设置_流程</span><span class="bug-tag">关联：pttcfy_0043</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20384450?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20384450</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】翻译功能使用过程中不可以使用录像功能</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">旁听同传使用中拍照-录像</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传翻译设置_流程</span><span class="bug-tag">关联：pttcfy_0056</span></div></div></div>
     <!--
@@ -559,7 +559,7 @@
       <div class="env-item"><div class="env-label">执行方式</div><div class="env-val">手动测试</div></div>
       <div class="env-item"><div class="env-label">浏览器</div><div class="env-val">N/A（端侧设备）</div></div>
       <div class="env-item"><div class="env-label">测试类型</div><div class="env-val">功能测试（手动）</div></div>
-      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">同声传译-1776345508704.csv</div></div>
+      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">同声传译-1776409420825.csv</div></div>
       <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.78</div></div>
     </div>
     <div style="margin-top:24px">
@@ -567,7 +567,7 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
 <div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>同声传译测试</strong><span>执行 33 条用例：通过 17、失败 3、阻塞 2</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>
+<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：🚫 测试不通过</span></div></div>
         <!--
           每个节点：
           <div class="tl-item">
@@ -621,7 +621,7 @@
 ║  端侧(RTOS) + APP(Android)          测试环境 URL                                            ║
 ║  手动测试      执行方式，如：Playwright MCP 辅助手动测试                 ║
 ║  N/A（端侧设备）          浏览器，如：Chromium（Headed 模式）                      ║
-║  同声传译-1776345508704.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
+║  同声传译-1776409420825.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
 ║  0.0.0.78     测试版本，如：v1.1（需求文档版本）                        ║
 ║                                                                              ║
 ║  【统计数字】（来自阶段三执行汇总）                                              ║
@@ -633,7 +633,7 @@
 ║  2        跳过数                                                  ║
 ║  11     未执行数                                                ║
 ║  77.3   执行通过率（保留1位小数，如：88.9）                       ║
-║  失败 3 个（P1:1 P2:2 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
+║  失败 3 个（P1:0 P2:3 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 2 条 跳过原因简述                                            ║
 ║                                                                              ║
 ║  【SVG 甜甜圈计算】（C = 2×π×65 ≈ 408.4）                                    ║
@@ -659,18 +659,18 @@
 <div class="mod-item"><div class="mod-name">旁听同传异常逻辑处理</div><div class="mod-pills"><span class="pill pill-p">通过 2</span><span class="pill pill-f">失败 0</span><span class="pill pill-b" style="background:#fef3c7;color:#92400e">阻塞 0</span></div></div>       各模块统计行（.mod-item 列表）                          ║
 ║  <tr class="group-row"><td colspan="6">旁听同传唤醒</td></tr>
 <tr><td><span class="tc-id blocked-id">pttchx_0038</span></td><td class="tc-name">旁听同传语言指令唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p2">P2</span></td><td class="step-text">功能开启方式1 - 眼镜端语音指令:说&quot;小飞小飞，开启旁听同传&quot;</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">pttchx_0039</span></td><td class="tc-name">旁听同传触控唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p1">P1</span></td><td class="step-text">功能开启方式2 - 眼镜端触控板:在launcher页面，焦点选中&quot;旁听同传&quot;双击触控板</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20346758</span></td></tr>
+<tr><td><span class="tc-id fail-id">pttchx_0039</span></td><td class="tc-name">旁听同传触控唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p2">P2</span></td><td class="step-text">功能开启方式2 - 眼镜端触控板:在launcher页面，焦点选中&quot;旁听同传&quot;双击触控板</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20346758</span></td></tr>
 <tr><td><span class="tc-id">pttchx_0040</span></td><td class="tc-name">旁听同传APP控制唤醒</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p1">P1</span></td><td class="step-text">功能开启方式3 - 手机App:   在App页面点击&quot;旁听同传&quot;   手动点击&quot;开始收声&quot;按钮   验证功能启动</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">pttchx_0041</span></td><td class="tc-name">眼镜未正确连接使用旁听同传</td><td class="tc-module">旁听同传唤醒</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.眼镜未与APP连接通过眼镜选择旁听同传打开使用2.眼镜与APP连接但是未登录，通过眼镜选择旁听同传使用打开</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">旁听同传翻译设置_流程</td></tr>
-<tr><td><span class="tc-id">pttcfy_0042</span></td><td class="tc-name">眼镜使用中高亮检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcfy_0042</span></td><td class="tc-name">眼镜使用中高亮检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">pttcfy_0043</span></td><td class="tc-name">眼镜使用中分段逻辑检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.打开使用眼镜的旁听同传2.周围有说话声音持续</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0044</span></td><td class="tc-name">旁听同传手机息屏使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.APP进入使用同传翻译2.使用过程中手机息屏观察使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0045</span></td><td class="tc-name">旁听同传使用中眼镜显示内容检查</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">验证翻译显示:眼镜端显示对方声音的原文、译文支持</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355144</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0046</span></td><td class="tc-name">旁听同传使用中切换字体大小-持续使用</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用2.使用过程中调节字幕的大小至大字体3.使用过程中调节字幕的大小至超大字体</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0047</span></td><td class="tc-name">旁听同传使用中切换字体大小-暂停</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.默认情况下使用1.使用过程中调节字幕的大小至大字体2.使用过程中调节字幕的大小至超大字体点击暂停</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0048</span></td><td class="tc-name">旁听同传使用中暂停的时长校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20355156</span></td></tr>
-<tr><td><span class="tc-id">pttcfy_0049</span></td><td class="tc-name">旁听同传使用中沉浸式校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20359794</span></td></tr>
+<tr><td><span class="tc-id">pttcfy_0049</span></td><td class="tc-name">旁听同传使用中沉浸式校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用中点击暂停3.暂停后继续使用</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text"><span style="color:#dc2626;font-weight:600">BUG#20359794</span></td></tr>
 <tr><td><span class="tc-id">pttcfy_0050</span></td><td class="tc-name">旁听同传译文播报功能</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">检查译文播报的默认配置</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0051</span></td><td class="tc-name">旁听同传译文播报功能</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.使用APP关闭眼镜的译文播报功能</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcfy_0052</span></td><td class="tc-name">旁听同传记录保存校验</td><td class="tc-module">旁听同传翻译设置_流程</td><td><span class="badge-p p1">P1</span></td><td class="step-text">使用旁听同传点击完成后校验记录中的内容</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
@@ -688,23 +688,23 @@
 <tr><td><span class="tc-id">pttcls_0063</span></td><td class="tc-name">旁听同传完成通过APP保存</td><td class="tc-module">旁听同传历史记录保存</td><td><span class="badge-p p2">P2</span></td><td class="step-text">App端完成方式2 - 完成按钮:点击右下角&quot;完成&quot;按钮</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcls_0064</span></td><td class="tc-name">旁听同传完成通过APP保存</td><td class="tc-module">旁听同传历史记录保存</td><td><span class="badge-p p2">P2</span></td><td class="step-text">App端完成方式3 - 查看历史记录:1.点击APP的查看历史记录后确认2.点击APP的查看历史记录后取消</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr class="group-row"><td colspan="6">旁听同传异常逻辑处理</td></tr>
-<tr><td><span class="tc-id">pttcyc_0065</span></td><td class="tc-name">旁听同传眼镜使用中蓝牙断开</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用过程中断开蓝牙连接（如被连接手机关闭蓝牙、连接超距）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id">pttcyc_0065</span></td><td class="tc-name">旁听同传眼镜使用中蓝牙断开</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.使用眼镜进行旁听同传2.使用过程中断开蓝牙连接（如被连接手机关闭蓝牙、连接超距）</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0066</span></td><td class="tc-name">旁听同传记录保存校验-应用冲突</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.开启旁听同传并进行翻译2.翻译APP切到后台并播放带有音频的软件如B站等</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0067</span></td><td class="tc-name">旁听同传记录无识别内容</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1.正常使用APP同传2.保持周围安静没有声音，查看眼镜的收音时长</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0068</span></td><td class="tc-name">旁听同传时电话接入</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用APP同传2.使用过程中接入SIM卡电话/微信电话接听3.使用过程中接入SIM卡电话/微信电话拒绝</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0069</span></td><td class="tc-name">旁听同传使用过程中低电量关机</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.眼镜处于低电量下持续使用至断电关机</td><td><span class="status-badge s-skip"><span class="dot dot-skip"></span>未执行</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">pttcyc_0070</span></td><td class="tc-name">旁听同传眼镜同传杀掉APP</td><td class="tc-module">旁听同传异常逻辑处理</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.正常使用眼镜同传翻译2.在使用过程中杀掉翻译APP</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>     用例明细表格行（含 group-row 分组行）                   ║
 ║  共 2 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
-║  <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346758?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20346758</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】同声传译触控唤醒异常</div><div style="color:#6b7280;line-height:1.5;">状态：已拒绝 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">旁听同传触控唤醒</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传唤醒</span><span class="bug-tag">关联：pttchx_0039</span></div></div></div>
+║  <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20346758?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20346758</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】同声传译触控唤醒异常</div><div style="color:#6b7280;line-height:1.5;">状态：已拒绝 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">旁听同传触控唤醒</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传唤醒</span><span class="bug-tag">关联：pttchx_0039</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20355144?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20355144</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】眼镜界面中文文案符号在句首</div><div style="color:#6b7280;line-height:1.5;">状态：已关闭 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">眼镜使用中分段逻辑检查</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传翻译设置_流程</span><span class="bug-tag">关联：pttcfy_0043</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20384450?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20384450</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#374151;margin-bottom:4px;">【眼镜端】翻译功能使用过程中不可以使用录像功能</div><div style="color:#6b7280;line-height:1.5;">状态：待修复 | 优先级：P2 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">旁听同传使用中拍照-录像</div><div class="bug-meta"><span class="bug-tag">模块：旁听同传翻译设置_流程</span><span class="bug-tag">关联：pttcfy_0056</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
-║  <li>已执行用例中通过率 77.3%，阻塞用例 2 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
-║  <li><strong>P1 缺陷遗留：</strong>存在 1 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 2 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+║  <li>P1 核心流程全部通过（7/7），冒烟质量达标</li>
+<li>已执行用例中通过率 77.3%，阻塞用例 2 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
+║  <li><strong>P2 缺陷遗留：</strong>存在 3 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
 <li><strong>阻塞用例较多：</strong>2 条用例（占比 6.1%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
-║  <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 90.9%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 27.8%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 33.3%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 2 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
+║  <strong style="color:#92400e">🚫 测试不通过</strong><br>✅ P1 通过率 100.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 33.3%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 50.0%（基线 ≥90%，含未执行/阻塞）<br>✅ 遗留 P1 缺陷 0 个（基于缺陷状态）（基线 ≤0）<br>❌ 遗留 P2 缺陷 2 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
 ║  <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
 <div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>同声传译测试</strong><span>执行 33 条用例：通过 17、失败 3、阻塞 2</span></div></div>
-<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
+<div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：🚫 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
