@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OTA · 功能测试报告</title>
+<title>ota · 功能测试报告</title>
 <style>
   :root {
     --primary: #2563eb; --primary-dark: #1d4ed8;
@@ -222,11 +222,11 @@
           <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 3.75a.75.75 0 00-1.5 0v3.5l-1.75 1.75a.75.75 0 001.06 1.06l2-2A.75.75 0 008.75 9V4.75z"/></svg>
           功能测试报告 · 手动测试执行
         </div>
-        <h1>OTA <span>— 测试报告</span></h1>
+        <h1>ota <span>— 测试报告</span></h1>
         <div class="header-meta">
           <div class="header-meta-item">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3.5h6A1.5 1.5 0 0112.5 5v6A1.5 1.5 0 0111 12.5H5A1.5 1.5 0 013.5 11V5A1.5 1.5 0 015 3.5z"/></svg>
-            讯飞眼镜项目 · OTA
+            讯飞眼镜项目 · ota
           </div>
           <div class="header-meta-item">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 0a.5.5 0 01.5.5v.5h4V.5a.5.5 0 011 0v.5H12a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2h1V.5a.5.5 0 01.5-.5zM4 3a1 1 0 00-1 1v1h10V4a1 1 0 00-1-1H4zm9 3H3v6a1 1 0 001 1h8a1 1 0 001-1V6z"/></svg>
@@ -274,7 +274,7 @@
     <div class="stat-card fail">
       <div class="stat-label">失败 / 缺陷</div>
       <div class="stat-num">5</div>
-      <div class="stat-sub">失败 5 个（P1:2 P2:3 P3:0）</div>
+      <div class="stat-sub">失败 5 个（P1:2 P2:0 P3:2）</div>
       <div class="stat-icon">❌</div>
     </div>
     <div class="stat-card skip">
@@ -342,18 +342,18 @@
           </div>
           <!-- P2 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">4 通过 / 3 失败 / 14 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p2" style="width:28.6%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p2">P2</span> 重要功能</span><span style="font-size:12px;color:#6b7280">3 通过 / 0 失败 / 6 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p2" style="width:50.0%"></div></div>
           </div>
           <!-- P3 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p3">P3</span> 一般功能</span><span style="font-size:12px;color:#6b7280">0 通过 / 0 失败 / 0 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p3" style="width:0%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p3">P3</span> 一般功能</span><span style="font-size:12px;color:#6b7280">0 通过 / 2 失败 / 6 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p3" style="width:0.0%"></div></div>
           </div>
           <!-- P4 -->
           <div class="pbar-row">
-            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p4">P4</span> 低优先级</span><span style="font-size:12px;color:#6b7280">0 通过 / 0 失败 / 0 执行</span></div>
-            <div class="pbar-track"><div class="pbar-fill p4" style="width:0%"></div></div>
+            <div class="pbar-meta"><span class="pbar-label"><span class="badge-p p4">P4</span> 低优先级</span><span style="font-size:12px;color:#6b7280">1 通过 / 1 失败 / 2 执行</span></div>
+            <div class="pbar-track"><div class="pbar-fill p4" style="width:50.0%"></div></div>
           </div>
         </div>
       </div>
@@ -386,7 +386,7 @@
         <div style="font-weight:600;font-size:14px;margin-bottom:10px;color:#b91c1c">⚠️ 风险 & 改进建议</div>
         <ul style="font-size:13px;line-height:1.9;color:#374151;padding-left:16px">
           <li><strong>P1 缺陷遗留：</strong>存在 2 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 3 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+<li><strong>P3 缺陷遗留：</strong>存在 2 个 P3 失败用例，可规划下版本修复</li>
 <li><strong>阻塞用例较多：</strong>7 条用例（占比 43.8%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>
           <!-- 每条：<li><strong>BUG/风险名：</strong>描述</li> -->
         </ul>
@@ -396,7 +396,7 @@
     <div style="margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-radius:8px;border-left:4px solid #2563eb">
       <div style="font-size:13px;color:#1e40af;font-weight:600;margin-bottom:4px">🎯 上线准入评估</div>
       <div style="font-size:13px;color:#374151;line-height:1.7">
-        <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 0.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 28.6%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>❌ 遗留 P1 缺陷 1 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
+        <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 0.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 50.0%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 0.0%（基线 ≥90%，含未执行/阻塞）<br>❌ 遗留 P1 缺陷 1 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0）
       </div>
     </div>
   </div>
@@ -428,17 +428,17 @@
 <tr><td><span class="tc-id">csyl_0486</span></td><td class="tc-name">验证iOS热点链路建立成功</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 翻译眼镜开启热点2. iOS手机启动App，搜索并加入眼镜的热点3. 观察连接状态及通知触发</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">csyl_0487</span></td><td class="tc-name">验证安卓WiFi_Direct链路建立成功</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 安卓设备开启WiFi Direct，发起配对2. App与设备完成直连配对3. 观察连接状态及通知触发</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">csyl_0488</span></td><td class="tc-name">验证iOS热点链路固件低升高OTA升级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. App加入翻译眼镜的热点，确认眼镜文件并记录2. 触发固件低升高OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的速度、完整性及耗时4. </td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
-<tr><td><span class="tc-id fail-id">csyl_0489</span></td><td class="tc-name">验证iOS热点链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App加入翻译眼镜的热点，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的速度、完整性及耗时4. </td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
+<tr><td><span class="tc-id fail-id">csyl_0489</span></td><td class="tc-name">验证iOS热点链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App加入翻译眼镜的热点，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的速度、完整性及耗时4. </td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
 <tr><td><span class="tc-id fail-id">csyl_0490</span></td><td class="tc-name">验证安卓WiFi_Direct链路固件低升高OTA升级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. App与安卓设备直连，确认眼镜文件并记录2. 触发固件低升高OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的稳定性、速度及耗时4. 传输</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
-<tr><td><span class="tc-id fail-id">csyl_0491</span></td><td class="tc-name">验证安卓WiFi_Direct链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App与安卓设备直连，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的稳定性、速度及耗时4. 传输</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
+<tr><td><span class="tc-id fail-id">csyl_0491</span></td><td class="tc-name">验证安卓WiFi_Direct链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App与安卓设备直连，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的稳定性、速度及耗时4. 传输</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
 <tr><td><span class="tc-id blocked-id">csyl_0494</span></td><td class="tc-name">验证iOS热点链路升级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包低升高到眼镜时，手动断开翻译眼镜热点2. 观察设备或App提示，重新建立链路，App重新加入眼镜热点，继续升级3. 完成升级后，记录总耗</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0495</span></td><td class="tc-name">验证iOS热点链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开翻译眼镜热点2. 观察设备或App提示，重新建立链路，App重新加入眼镜热点，继续降级3. 完成降级后，记录总耗</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0495</span></td><td class="tc-name">验证iOS热点链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开翻译眼镜热点2. 观察设备或App提示，重新建立链路，App重新加入眼镜热点，继续降级3. 完成降级后，记录总耗</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">csyl_0496</span></td><td class="tc-name">验证安卓WiFi_Direct链路升级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包低升高到眼镜时，手动断开安卓WiFi连接2. 观察设备或App提示，重新建立链路，继续升级3. 完成升级后，记录总耗时、校验眼镜文件完整</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0497</span></td><td class="tc-name">验证安卓WiFi_Direct链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开安卓WiFi Direct连接2. 观察设备或App提示，重新建立链路，继续降级3. 完成降级后，记录总耗时、校</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0498</span></td><td class="tc-name">验证iOS热点链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 通过iOS热点链路，App加入翻译眼镜热点，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0499</span></td><td class="tc-name">验证安卓WiFi_Direct链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 通过安卓WiFi Direct链路，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记录是否有</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">csyl_0509</span></td><td class="tc-name">验证OTA包上传存储空间限制</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.app开始向眼镜传输文件</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
-<tr><td><span class="tc-id">csyl_0510</span></td><td class="tc-name">验证OTA包断传后，重新上传新版本OTA包，存储管理</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.上传最新版本的OTA包</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0497</span></td><td class="tc-name">验证安卓WiFi_Direct链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开安卓WiFi Direct连接2. 观察设备或App提示，重新建立链路，继续降级3. 完成降级后，记录总耗时、校</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0498</span></td><td class="tc-name">验证iOS热点链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 通过iOS热点链路，App加入翻译眼镜热点，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0499</span></td><td class="tc-name">验证安卓WiFi_Direct链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 通过安卓WiFi Direct链路，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记录是否有</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id fail-id">csyl_0509</span></td><td class="tc-name">验证OTA包上传存储空间限制</td><td class="tc-module">测试用例</td><td><span class="badge-p p4">P4</span></td><td class="step-text">1.app开始向眼镜传输文件</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
+<tr><td><span class="tc-id">csyl_0510</span></td><td class="tc-name">验证OTA包断传后，重新上传新版本OTA包，存储管理</td><td class="tc-module">测试用例</td><td><span class="badge-p p4">P4</span></td><td class="step-text">1.上传最新版本的OTA包</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">csyl_0511</span></td><td class="tc-name">验证单独升级BES,ISP固件</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.OTA单独更新BES芯片固件2.OTA单独升级ISP芯片固件</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">csyl_0512</span></td><td class="tc-name">验证低电量不允许OTA升级</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.app开始向眼镜传输文件</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
           <!--
@@ -484,9 +484,9 @@
   <div class="bugs-list">
     <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证iOS热点链路固件低升高OTA升级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0488</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证安卓WiFi_Direct链路固件低升高OTA升级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0490</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证iOS热点链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0489</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-4</span></div><div class="bug-title">验证安卓WiFi_Direct链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0491</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-5</span></div><div class="bug-title">验证OTA包上传存储空间限制</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0509</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p3"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p3">P3</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p3">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证iOS热点链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0489</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p3"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p3">P3</span></div><div style="margin-bottom:12px;"><span class="bug-id p3">#待提交-4</span></div><div class="bug-title">验证安卓WiFi_Direct链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0491</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p4"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p4">P4</span></div><div style="margin-bottom:12px;"><span class="bug-id p4">#待提交-5</span></div><div class="bug-title">验证OTA包上传存储空间限制</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0509</span></div></div></div>
     <!--
       每个缺陷一块：
       <div class="bug-card">
@@ -538,14 +538,14 @@
       <div class="env-item"><div class="env-label">执行方式</div><div class="env-val">手动测试</div></div>
       <div class="env-item"><div class="env-label">浏览器</div><div class="env-val">N/A（端侧设备）</div></div>
       <div class="env-item"><div class="env-label">测试类型</div><div class="env-val">功能测试（手动）</div></div>
-      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">OTA-1776410753245.csv</div></div>
+      <div class="env-item"><div class="env-label">用例文件</div><div class="env-val" style="font-size:12px">ota-1776416492742.csv</div></div>
       <div class="env-item"><div class="env-label">测试版本</div><div class="env-val">0.0.0.78</div></div>
     </div>
     <div style="margin-top:24px">
       <div class="card-title" style="margin-bottom:16px">⏱️ 测试执行时间线</div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>OTA测试</strong><span>执行 16 条用例：通过 4、失败 5、阻塞 7</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>ota测试</strong><span>执行 16 条用例：通过 4、失败 5、阻塞 7</span></div></div>
 <div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>
         <!--
           每个节点：
@@ -565,7 +565,7 @@
 </div><!-- /container -->
 
 <div class="footer">
-  <strong>OTA · 功能测试报告</strong> &nbsp;|&nbsp;
+  <strong>ota · 功能测试报告</strong> &nbsp;|&nbsp;
   报告生成时间：2026-04-17 &nbsp;|&nbsp;
   测试人员：赵奔(benzhao) &nbsp;|&nbsp;
   工具：手动测试
@@ -592,7 +592,7 @@
 ║                         占位符填充说明                                        ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
 ║  【基本信息】（来自 project-config.md）                                       ║
-║  OTA      模块名称，如：社群公告管理                               ║
+║  ota      模块名称，如：社群公告管理                               ║
 ║  讯飞眼镜项目     项目名称，如：创业服务管理平台                            ║
 ║  2026-04-17        执行日期，如：2026-03-13                                ║
 ║  赵奔(benzhao)           测试人员，如：超管-张三                                   ║
@@ -600,7 +600,7 @@
 ║  端侧(RTOS) + APP(Android)          测试环境 URL                                            ║
 ║  手动测试      执行方式，如：Playwright MCP 辅助手动测试                 ║
 ║  N/A（端侧设备）          浏览器，如：Chromium（Headed 模式）                      ║
-║  OTA-1776410753245.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
+║  ota-1776416492742.csv        用例文件名，如：社群公告管理-测试用例.csv                  ║
 ║  0.0.0.78     测试版本，如：v1.1（需求文档版本）                        ║
 ║                                                                              ║
 ║  【统计数字】（来自阶段三执行汇总）                                              ║
@@ -612,7 +612,7 @@
 ║  0        跳过数                                                  ║
 ║  0     未执行数                                                ║
 ║  25.0   执行通过率（保留1位小数，如：88.9）                       ║
-║  失败 5 个（P1:2 P2:3 P3:0） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
+║  失败 5 个（P1:2 P2:0 P3:2） 缺陷摘要，如：P2 缺陷 1 个 · P3 缺陷 1 个               ║
 ║  因功能未就绪/前置条件不满足被阻塞 7 条 跳过原因简述                                            ║
 ║                                                                              ║
 ║  【SVG 甜甜圈计算】（C = 2×π×65 ≈ 408.4）                                    ║
@@ -637,32 +637,32 @@
 <tr><td><span class="tc-id">csyl_0486</span></td><td class="tc-name">验证iOS热点链路建立成功</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 翻译眼镜开启热点2. iOS手机启动App，搜索并加入眼镜的热点3. 观察连接状态及通知触发</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">csyl_0487</span></td><td class="tc-name">验证安卓WiFi_Direct链路建立成功</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 安卓设备开启WiFi Direct，发起配对2. App与设备完成直连配对3. 观察连接状态及通知触发</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id fail-id">csyl_0488</span></td><td class="tc-name">验证iOS热点链路固件低升高OTA升级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. App加入翻译眼镜的热点，确认眼镜文件并记录2. 触发固件低升高OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的速度、完整性及耗时4. </td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
-<tr><td><span class="tc-id fail-id">csyl_0489</span></td><td class="tc-name">验证iOS热点链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App加入翻译眼镜的热点，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的速度、完整性及耗时4. </td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
+<tr><td><span class="tc-id fail-id">csyl_0489</span></td><td class="tc-name">验证iOS热点链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App加入翻译眼镜的热点，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的速度、完整性及耗时4. </td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
 <tr><td><span class="tc-id fail-id">csyl_0490</span></td><td class="tc-name">验证安卓WiFi_Direct链路固件低升高OTA升级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p1">P1</span></td><td class="step-text">1. App与安卓设备直连，确认眼镜文件并记录2. 触发固件低升高OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的稳定性、速度及耗时4. 传输</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail"><span style="color:#dc2626;font-weight:600">BUG#20382136</span></td></tr>
-<tr><td><span class="tc-id fail-id">csyl_0491</span></td><td class="tc-name">验证安卓WiFi_Direct链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App与安卓设备直连，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的稳定性、速度及耗时4. 传输</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
+<tr><td><span class="tc-id fail-id">csyl_0491</span></td><td class="tc-name">验证安卓WiFi_Direct链路固件高降低OTA降级功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App与安卓设备直连，确认眼镜文件并记录2. 触发固件高降低OTA包下载，启动计时工具3. 监测App将OTA文件传输到眼镜的稳定性、速度及耗时4. 传输</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
 <tr><td><span class="tc-id blocked-id">csyl_0494</span></td><td class="tc-name">验证iOS热点链路升级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包低升高到眼镜时，手动断开翻译眼镜热点2. 观察设备或App提示，重新建立链路，App重新加入眼镜热点，继续升级3. 完成升级后，记录总耗</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0495</span></td><td class="tc-name">验证iOS热点链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开翻译眼镜热点2. 观察设备或App提示，重新建立链路，App重新加入眼镜热点，继续降级3. 完成降级后，记录总耗</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0495</span></td><td class="tc-name">验证iOS热点链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开翻译眼镜热点2. 观察设备或App提示，重新建立链路，App重新加入眼镜热点，继续降级3. 完成降级后，记录总耗</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">csyl_0496</span></td><td class="tc-name">验证安卓WiFi_Direct链路升级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包低升高到眼镜时，手动断开安卓WiFi连接2. 观察设备或App提示，重新建立链路，继续升级3. 完成升级后，记录总耗时、校验眼镜文件完整</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0497</span></td><td class="tc-name">验证安卓WiFi_Direct链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开安卓WiFi Direct连接2. 观察设备或App提示，重新建立链路，继续降级3. 完成降级后，记录总耗时、校</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0498</span></td><td class="tc-name">验证iOS热点链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 通过iOS热点链路，App加入翻译眼镜热点，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id blocked-id">csyl_0499</span></td><td class="tc-name">验证安卓WiFi_Direct链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1. 通过安卓WiFi Direct链路，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记录是否有</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
-<tr><td><span class="tc-id fail-id">csyl_0509</span></td><td class="tc-name">验证OTA包上传存储空间限制</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.app开始向眼镜传输文件</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
-<tr><td><span class="tc-id">csyl_0510</span></td><td class="tc-name">验证OTA包断传后，重新上传新版本OTA包，存储管理</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.上传最新版本的OTA包</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0497</span></td><td class="tc-name">验证安卓WiFi_Direct链路降级过程中断连后续传功能</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. App传输OTA包高降低到眼镜时，手动断开安卓WiFi Direct连接2. 观察设备或App提示，重新建立链路，继续降级3. 完成降级后，记录总耗时、校</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0498</span></td><td class="tc-name">验证iOS热点链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 通过iOS热点链路，App加入翻译眼镜热点，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id blocked-id">csyl_0499</span></td><td class="tc-name">验证安卓WiFi_Direct链路重复升降级稳定性</td><td class="tc-module">测试用例</td><td><span class="badge-p p3">P3</span></td><td class="step-text">1. 通过安卓WiFi Direct链路，交替执行固件低升高、高降低升级，重复3到5次2. 每次升级后记录耗时、检查设备状态、链路适配及眼镜文件3. 记录是否有</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
+<tr><td><span class="tc-id fail-id">csyl_0509</span></td><td class="tc-name">验证OTA包上传存储空间限制</td><td class="tc-module">测试用例</td><td><span class="badge-p p4">P4</span></td><td class="step-text">1.app开始向眼镜传输文件</td><td><span class="status-badge s-fail"><span class="dot dot-fail"></span>失败</span></td><td class="remark-text remark-fail">—</td></tr>
+<tr><td><span class="tc-id">csyl_0510</span></td><td class="tc-name">验证OTA包断传后，重新上传新版本OTA包，存储管理</td><td class="tc-module">测试用例</td><td><span class="badge-p p4">P4</span></td><td class="step-text">1.上传最新版本的OTA包</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id blocked-id">csyl_0511</span></td><td class="tc-name">验证单独升级BES,ISP固件</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.OTA单独更新BES芯片固件2.OTA单独升级ISP芯片固件</td><td><span class="status-badge s-blocked"><span class="dot dot-blocked"></span>阻塞</span></td><td class="remark-text">—</td></tr>
 <tr><td><span class="tc-id">csyl_0512</span></td><td class="tc-name">验证低电量不允许OTA升级</td><td class="tc-module">测试用例</td><td><span class="badge-p p2">P2</span></td><td class="step-text">1.app开始向眼镜传输文件</td><td><span class="status-badge s-pass"><span class="dot dot-pass"></span>通过</span></td><td class="remark-text">—</td></tr>     用例明细表格行（含 group-row 分组行）                   ║
 ║  共 7 条用例因前置功能未就绪被阻塞（Blocked），待功能开发完成后补充执行。 未执行用例说明文字                                      ║
 ║  <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证iOS热点链路固件低升高OTA升级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0488</span></div></div></div>
 <div class="bug-card"><div class="bug-stripe"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p1">P1</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证安卓WiFi_Direct链路固件低升高OTA升级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0490</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p2">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证iOS热点链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0489</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-4</span></div><div class="bug-title">验证安卓WiFi_Direct链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0491</span></div></div></div>
-<div class="bug-card"><div class="bug-stripe p2"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p2">P2</span></div><div style="margin-bottom:12px;"><span class="bug-id p2">#待提交-5</span></div><div class="bug-title">验证OTA包上传存储空间限制</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0509</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
+<div class="bug-card"><div class="bug-stripe p3"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p3">P3</span></div><div style="margin-bottom:12px;"><div style="margin-bottom:8px;"><a href="https://project.xfchat.iflytek.com/cbg_product_develop/bug_new/detail/20382136?parentUrl=%2Fcbg_product_develop%2Fbug_new%2Fhomepage&amp;openScene=2" target="_blank" style="color:inherit;text-decoration:none"><span class="bug-id p3">BUG#20382136</span></a><div style="margin-top:6px;padding:8px;background:#f9fafb;border-radius:6px;font-size:12px;"><div style="font-weight:600;color:#b91c1c;margin-bottom:4px;">【眼镜端】OTA显示重启中实际没有重启升级失败</div><div style="color:#b91c1c;line-height:1.5;">状态：待修复 | 优先级：P1 | 严重性：未知 | 处理人：未分配</div></div></div></div><div class="bug-title">验证iOS热点链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0489</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p3"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p3">P3</span></div><div style="margin-bottom:12px;"><span class="bug-id p3">#待提交-4</span></div><div class="bug-title">验证安卓WiFi_Direct链路固件高降低OTA降级功能</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0491</span></div></div></div>
+<div class="bug-card"><div class="bug-stripe p4"></div><div class="bug-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;"><span class="badge-p p4">P4</span></div><div style="margin-bottom:12px;"><span class="bug-id p4">#待提交-5</span></div><div class="bug-title">验证OTA包上传存储空间限制</div><div class="bug-meta"><span class="bug-tag">模块：测试用例</span><span class="bug-tag">关联：csyl_0509</span></div></div></div>         缺陷卡片（.bug-card 列表，无缺陷时填"本次测试无缺陷 🎉"）║
 ║  <li>已执行用例中通过率 25.0%，阻塞用例 7 条待后续补充验证</li> 质量亮点 <li> 列表                                    ║
 ║  <li><strong>P1 缺陷遗留：</strong>存在 2 个 P1 失败用例，核心流程受阻，建议优先修复后重测</li>
-<li><strong>P2 缺陷遗留：</strong>存在 3 个 P2 失败用例，重要功能异常，建议本版本内修复</li>
+<li><strong>P3 缺陷遗留：</strong>存在 2 个 P3 失败用例，可规划下版本修复</li>
 <li><strong>阻塞用例较多：</strong>7 条用例（占比 43.8%）因前置功能未就绪被阻塞，待功能完成后补充回归</li>  风险建议 <li> 列表                                     ║
-║  <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 0.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 28.6%（基线 ≥95%，含未执行/阻塞）<br>✅ P3 通过率 N/A（无用例）（基线 ≥90%，含未执行/阻塞）<br>❌ 遗留 P1 缺陷 1 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
+║  <strong style="color:#b91c1c">❌ 测试不通过</strong><br>❌ P1 通过率 0.0%（基线 ≥100%，含未执行/阻塞）<br>❌ P2 通过率 50.0%（基线 ≥95%，含未执行/阻塞）<br>❌ P3 通过率 0.0%（基线 ≥90%，含未执行/阻塞）<br>❌ 遗留 P1 缺陷 1 个（基于缺陷状态）（基线 ≤0）<br>✅ 遗留 P2 缺陷 0 个（基于缺陷状态）（基线 ≤0） 上线准入评估文字（含结论徽标）                          ║
 ║  <div class="tl-item"><div class="tl-time">准备</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>环境准备</strong><span>连接设备、App配对</span></div></div>
-<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>OTA测试</strong><span>执行 16 条用例：通过 4、失败 5、阻塞 7</span></div></div>
+<div class="tl-item"><div class="tl-time">执行</div><div class="tl-line"><div class="tl-dot" style="background:#16a34a"></div><div class="tl-stem"></div></div><div class="tl-content"><strong>ota测试</strong><span>执行 16 条用例：通过 4、失败 5、阻塞 7</span></div></div>
 <div class="tl-item"><div class="tl-time">2026-04-17</div><div class="tl-line"><div class="tl-dot" style="background:#2563eb"></div></div><div class="tl-content"><strong>报告输出</strong><span>结论：❌ 测试不通过</span></div></div>     时间线节点（.tl-item 列表）                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
